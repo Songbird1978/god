@@ -1,0 +1,67 @@
+.scrollingText {
+    white-space: nowrap;
+    /* Prevents text from wrapping */
+    overflow: hidden;
+    /* Hides overflowing text */
+    display: inline-block;
+    position: relative;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    /* Adjust size as needed */
+    color: hsl(0, 11%, 70%);
+    /* Text color */
+    padding: 10px;
+    animation: scrollText 10s linear infinite;
+    width: 100%;
+    height: 15vh;
+    padding: 10px;
+    background-color: grey,
+}
+
+
+.tickerContainer {
+    width: 100%;
+    overflow: hidden;
+    background: rgb(83, 82, 82);
+    /* Adjust to match your design */
+    color: hsl(0, 34%, 86%);
+    padding: 10px 0;
+    font-size: 1.2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    position: relative;
+}
+
+.tickerWrapper {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.tickerContent {
+    display: inline-block;
+    white-space: nowrap;
+    animation: tickerMove 100s linear infinite;
+}
+
+.tickerItem {
+    display: inline-block;
+    padding-right: 50px;
+    /* Space between articles */
+}
+
+.breakingNews {
+    color: rgb(209, 134, 134);
+}
+
+/* Keyframe animation to make text scroll */
+@keyframes tickerMove {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}

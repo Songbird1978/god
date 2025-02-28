@@ -1,0 +1,40 @@
+.imageList {
+    display: flex;
+    overflow: scroll;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.imageItem {
+    padding: 5px;
+}
+
+.image-gallery-icon,
+.image-gallery-svg {
+    color: white;
+}
+
+/* Ensure all images in the gallery have a fixed height */
+.image-gallery-slide img {
+    height: 500px;
+    /* Set a fixed height for all images */
+    width: auto;
+    /* Maintain aspect ratio */
+    object-fit: contain;
+    /* Crop images to fit the height */
+    max-width: 100%;
+    /* Prevent stretching */
+}
+
+/* Thumbnails should also have a fixed height */
+.image-gallery-thumbnails img {
+    height: 100px;
+    /* Adjust as needed */
+    width: auto;
+    object-fit: cover;
+}
+
+::after .image-gallery-thumbnails-bottom ::on-hover {
+    color: grey;
+    border-color: grey;
+}

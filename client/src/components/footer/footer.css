@@ -1,0 +1,128 @@
+.footerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.7;
+    padding: 35px 35px;
+    text-decoration: none;
+    color: grey;
+}
+
+.columnOne,
+.columnTwo,
+.columnThree,
+.columnFour {
+    width: 25%;
+}
+
+.columnOne {
+    display: flex;
+    flex-direction: column;
+}
+
+.columnOneNav {
+
+    display: inline-flex;
+    flex-direction: row;
+    padding: 5px;
+    font-size: 15px;
+    list-style-type: none;
+    color: #403434;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: space-evenly;
+}
+
+.columnOneContact {
+
+    display: inline-flex;
+    flex-direction: row;
+    padding: 5px;
+    font-size: 20px;
+    list-style-type: none;
+    color: #403434;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: space-evenly;
+}
+
+.contactListItem,
+.icon {
+    padding: 2px;
+    color: #403434;
+    text-decoration: none;
+}
+
+.columnTwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-decoration: none;
+    color: grey;
+}
+
+.button link a {
+    list-style-type: none;
+    padding: 15px;
+    border-radius: 15;
+    width: 150px;
+    text-decoration: none;
+    color: grey;
+}
+
+.columnThree {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.columnFour {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #403434;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+@media (max-width: 640px) {
+    .footerContainer {
+        flex-direction: column;
+        /* Stack elements */
+        align-items: center;
+        /* Center all content */
+        text-align: center;
+        /* Center text content */
+        padding: 20px;
+    }
+
+    .columnOne,
+    .columnTwo,
+    .columnThree,
+    .columnFour {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* Ensure each section stacks */
+        align-items: center;
+        /* Center items */
+        text-align: center;
+        /* Center text */
+        margin-bottom: 15px;
+        /* Add spacing between sections */
+    }
+
+    .columnOneNav,
+    .columnOneContact {
+        flex-direction: row;
+        /* Stack items inside */
+    }
+}

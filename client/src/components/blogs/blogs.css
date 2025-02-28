@@ -1,0 +1,62 @@
+.title {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    background-color: rgb(209, 134, 134);
+    color: hsl(0, 34%, 86%);
+    padding: 30px;
+    text-align: justify;
+    margin: 0;
+}
+
+.record {
+    position: relative;
+    background: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 5px 5px rgb(64, 38, 38);
+}
+
+.centerHole {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+
+.groove {
+    position: absolute;
+    border-radius: 50%;
+    border: 0.2px solid gray;
+}
+
+.blogContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(209, 134, 134);
+    color: hsl(0, 34%, 86%);
+    overflow: scroll;
+    direction: ltr;
+    padding: 30px;
+
+}
+
+.blogItem {
+    padding: 10px;
+}
+
+.blogs {
+
+    background-color: rgb(209, 134, 134);
+
+    /* <-- the trick */
+}

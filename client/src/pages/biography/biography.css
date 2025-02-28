@@ -1,0 +1,47 @@
+.about {
+    display: block;
+    justify-content: center;
+    background-color: lightgray;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 30px;
+    text-align: justify;
+    font-size: 1rem;
+    z-index: 2;
+}
+
+.biographyParagraph {
+    overflow-clip-margin: 10px;
+
+}
+
+.biographyPaper {
+    border-radius: 10px;
+    background-color: white;
+    color: grey;
+    border-style: solid;
+    border-color: darkgray;
+    width: 100%;
+    height: 80vh;
+    box-shadow: 10px 5px 5px grey;
+    padding: 50px;
+    overflow-y: scroll;
+}
+
+.heading {
+    display: flex;
+    justify-content: left;
+    color: grey;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.name {
+    width: 100%;
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    justify-content: left;
+}
+
+.box {
+    margin: 0;
+}
