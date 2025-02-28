@@ -53,8 +53,6 @@ const Blogs = ({ blogs = [] }) => {
         <div className="blogs" >
             <h1 className="title" id="blogs" style={{ width: "100%" }}>Blogs</h1>
             <div className="blogContainer">
-                {/* Render Record Component */}
-
                 {/* Render Blogs */}
                 {blogs.length > 0 ? (
                     blogs.map((blog, index) => {
@@ -67,12 +65,19 @@ const Blogs = ({ blogs = [] }) => {
                         console.log("Blog description:", blog.shortDescription);
                         console.log("Extracted Image URL:", imageUrl); // Debugging
                         return (
-                            <div key={index} className="blogItem">
-                                {/* Render Record with Blog's image */}
-                                <Record imageUrl={imageUrl}>
-                                    <figure className="front"></figure>
-                                </Record>
-
+                            <div key={index} className="blogItem flip-card-container" >
+                                <div className="flip-card">
+                                    {/* Front side - Record - Render Record with Blog's image and grooves*/}
+                                    <div className="flip-card-front">
+                                        <Record imageUrl={imageUrl} />
+                                    </div>
+                                    {/* Back side - blog Info */}
+                                    <div grooveCount="0" className="flip-card-back">
+                                        <h2>{blog.Name}</h2>
+                                        <p>{blog.shortDescription}</p>
+                                        <button className="read-more">Read More</button>
+                                    </div>
+                                </div>
                             </div>
                         );
                     })
@@ -80,7 +85,7 @@ const Blogs = ({ blogs = [] }) => {
                     <p>No blogs available.</p>
                 )}
             </div>
-        </div>
+        </div >
 
     );
 };
