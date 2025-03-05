@@ -31,6 +31,12 @@
     },
     "article": {
       "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "link": {
+      "type": "string"
     }
   }
 }

@@ -2,6 +2,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 100px;
 
 }
 
@@ -9,8 +10,8 @@
     width: 70%;
     height: auto;
     justify-content: center;
-    border: solid pink 2px;
-    background-color: lavender;
+    border: solid grey 2px;
+    background-color: rgb(199, 191, 191);
     text-align: center;
     padding: 10px;
 

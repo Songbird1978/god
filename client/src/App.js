@@ -8,6 +8,8 @@ import './App.css';
 //import Enter from "./pages/enter/enter";
 import Navbar from "./components/navbar/navbar";
 import Footer from './components/footer/footer';
+import MailingList from './pages/forms/mailingList';
+import Message from './pages/forms/message';
 
 function App() {
   const location = useLocation();
@@ -21,6 +23,8 @@ function App() {
           <Route path="/tour" element={<Tour />} />
           <Route path="/discography" element={<Discography />} />
           <Route path="/biography" element={<Biography />} />
+          <Route path="/message" element={<Message />} />
+          <Route path="/mailingList" element={<MailingList />} />
         </Routes>
         <Footer />
       </div >

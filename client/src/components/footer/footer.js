@@ -23,13 +23,13 @@ function Footer() {
                 </div>
 
                 <div className="columnTwo">
-                    <Link to="" style={{ textDecoration: "none", color: "grey" }}>
+                    <Link to="./message" style={{ textDecoration: "none", color: "grey" }}>
                         <div className="button">CONTACT</div>
                     </Link>
                 </div>
 
                 <div className="columnThree">
-                    <Link to="" style={{ textDecoration: "none", color: "grey" }}>
+                    <Link to="./mailingList" style={{ textDecoration: "none", color: "grey" }}>
                         <div className="button">MAILING LIST</div>
                     </Link>
                 </div>

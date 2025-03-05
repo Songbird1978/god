@@ -385,10 +385,12 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
     images: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    link: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'> &
       Schema.Attribute.Private;
