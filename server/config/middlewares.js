@@ -6,7 +6,7 @@ module.exports = [
     name: "strapi::cors",
     config: {
       enabled: true,
-      origin: ["https://god-26r38wp4f-songbird1978s-projects.vercel.app"], // Allow your Vercel domain
+      origin: ["https://god-sage.vercel.app"], // Allow your Vercel domain
       methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
       headers: ["Content-Type", "Authorization"],
     },
