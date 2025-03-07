@@ -16,7 +16,7 @@ const BlogModal = ({ blog, index, handleModalClose }) => {
                     <CloseIcon className="closeIcon" onClick={handleModalClose} style={{ color: "grey" }} />
                 </div>
                 <div className="picBox">
-                    <img className="pic" style={{ width: "auto", height: "auto" }} src={(`http://localhost:1337${blog.images[0].formats?.thumbnail?.url}`)} alt={blog.Name}></img>
+                    <img className="pic" style={{ width: "auto", height: "auto" }} src={(`${blog.images[0].formats?.thumbnail?.url}`)} alt={blog.Name}></img>
                 </div>
                 <div className="blogTitle">
                     <h2 className="blogTitle">{blog?.Name}</h2>

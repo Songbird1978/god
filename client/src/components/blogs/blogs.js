@@ -68,7 +68,7 @@ const Blogs = ({ blogs = [] }) => {
                 {blogs.length > 0 ? (
                     blogs.map((blog, index) => {
                         const imageUrl = blog.images?.length > 0
-                            ? `http://localhost:1337${blog.images[0].formats?.thumbnail?.url || blog.images[0].url}`
+                            ? `${blog.images[0].formats?.thumbnail?.url || blog.images[0].url}`
                             : ""; //Fallback if no image
 
                         return (

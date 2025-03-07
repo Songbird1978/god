@@ -22,22 +22,25 @@ function Home() {
 
         const fetchData = async () => {
             try {
+
+                const API_URL = process.env.REACT_APP_API_URL;
                 // fetch blogs 
-                const blogResponse = await fetch("http://localhost:1337/api/blogs?populate=*");
+                const blogResponse = await fetch(`${API_URL}/api/blogs?populate=*`);
+
                 const blogData = await blogResponse.json();
                 setBlogs(blogData.data || []);
 
 
                 // fetch Gallery
-                const galleryResponse = await fetch("http://localhost:1337/api/galleries?populate=*");
+                const galleryResponse = await fetch(`${API_URL}/api/galleries?populate=*`);
                 const galleryData = await galleryResponse.json();
 
                 // process blog images
                 const formattedBlogImages = blogData.data.flatMap(blogItem => {
                     if (!blogItem.images || Array.isArray(blogItem.images)) return [];
                     return blogItem.images.map(image => ({
-                        original: `http://localhost:1337${image.url}`,
-                        thumbnail: image.formats.thumbnail ? `http://localhost:1337${image.formats.thumbnail.url}` : `http://localhost:1337${image.url}`,
+                        original: `${API_URL}${image.url}`,
+                        thumbnail: image.formats.thumbnail ? `${API_URL}${image.formats.thumbnail.url}` : `${API_URL}${image.url}`,
                         description: blogItem.imageDescription || "No description"
                     }));
                 });
@@ -49,8 +52,8 @@ function Home() {
                     if (!galleryItem.images || !Array.isArray(galleryItem.images)) return []; // make sure image exists
 
                     return galleryItem.images.map(image => ({
-                        original: `http://localhost:1337${image.url}`, // directly access
-                        thumbnail: image.formats?.thumbnail ? `http://localhost:1337${image.formats.thumbnail.url}` : `http://localhost:1337${image.url}`,
+                        original: `${API_URL}${image.url}`, // directly access
+                        thumbnail: image.formats?.thumbnail ? `${API_URL}${image.formats.thumbnail.url}` : `${API_URL}${image.url}`,
                         description: galleryItem.imageDescription || "No description available", // imagedescription field
                     }));
                 });
