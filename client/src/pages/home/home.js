@@ -38,14 +38,10 @@ function Home() {
                 // process blog images
                 const formattedBlogImages = blogData.data.flatMap(blogItem => {
 
-                    console.log("Blog Item Images:", blogItem.images);  // Log the images array first
                     if (!blogItem.images || Array.isArray(blogItem.images)) return []; // make sure image exists
 
                     return blogItem.images.map(image => {
                         // log the image object before using it 
-                        console.log(image.formats?.thumbnail?.url);
-                        console.log("Blog Image Original URL:", `${image.url}`);
-                        console.log("Blog Image Thumbnail URL:", `${image.formats?.thumbnail?.url}`);
 
                         return {
                             original: `${image.url}`, // directly access
@@ -62,10 +58,6 @@ function Home() {
 
                     return galleryItem.images.map(image => {
                         // log the image object before using it
-                        console.log("Gallery Image Original URL 1:", `${image.formats?.thumbnail?.url}`);
-                        console.log("Gallery Image Original URL:", `${image.url}`);
-                        console.log("Gallery Image Thumbnail URL:", `${image.formats?.thumbnail?.url}`);
-
                         return {
                             original: `${image.url}`, // directly access
                             thumbnail: image.formats?.thumbnail ? `${image.formats.thumbnail.url}` : `${image.url}`,
