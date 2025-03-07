@@ -58,6 +58,8 @@ function Home() {
 
                     return galleryItem.images.map(image => {
                         // log the image object before using it
+                        console.log("Gallery Data from API:", galleryData);
+                        console.log("formatted gallery items:", formattedGallery);
                         return {
                             original: `${image.url}`, // directly access
                             thumbnail: image.formats?.thumbnail ? `${image.formats.thumbnail.url}` : `${image.url}`,
