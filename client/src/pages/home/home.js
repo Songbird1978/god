@@ -39,8 +39,8 @@ function Home() {
                 const formattedBlogImages = blogData.data.flatMap(blogItem => {
                     if (!blogItem.images || Array.isArray(blogItem.images)) return [];
                     return blogItem.images.map(image => ({
-                        original: `${API_URL}${image.url}`,
-                        thumbnail: image.formats.thumbnail ? `${API_URL}${image.formats.thumbnail.url}` : `${API_URL}${image.url}`,
+                        original: `${API_URL}/${image.url}`,
+                        thumbnail: image.formats.thumbnail ? `${API_URL}/${image.formats.thumbnail.url}` : `${API_URL}/${image.url}`,
                         description: blogItem.imageDescription || "No description"
                     }));
                 });
@@ -52,8 +52,8 @@ function Home() {
                     if (!galleryItem.images || !Array.isArray(galleryItem.images)) return []; // make sure image exists
 
                     return galleryItem.images.map(image => ({
-                        original: `${API_URL}${image.url}`, // directly access
-                        thumbnail: image.formats?.thumbnail ? `${API_URL}${image.formats.thumbnail.url}` : `${API_URL}${image.url}`,
+                        original: `${API_URL}/${image.url}`, // directly access
+                        thumbnail: image.formats?.thumbnail ? `${API_URL}/${image.formats.thumbnail.url}` : `${API_URL}/${image.url}`,
                         description: galleryItem.imageDescription || "No description available", // imagedescription field
                     }));
                 });

@@ -79,7 +79,7 @@ const Blogs = ({ blogs = [] }) => {
                                         <Record imageUrl={imageUrl} />
                                     </div>
                                     {/* Back side - blog Info */}
-                                    <div grooveCount="0" className="flip-card-back">
+                                    <div groovecount="0" className="flip-card-back">
                                         <h2>{blog.Name}</h2>
                                         <p>{blog.shortDescription}</p>
                                         <button onClick={() => openModal(blog) & console.log("openModalClicked:", true)} className="read-more">Read More</button>
