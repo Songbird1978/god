@@ -8,7 +8,6 @@ import CloseIcon from '@mui/icons-material/Close';
 // Blogs Component
 const BlogModal = ({ blog, index, handleModalClose }) => {
 
-    console.log("received from blogs:", `http://localhost:1337${blog.images[0].formats?.thumbnail?.url || blog.images[0].url}`);
 
     return (
         <div key={index} className="modalContainer">

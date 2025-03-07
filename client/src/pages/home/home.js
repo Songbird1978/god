@@ -31,7 +31,6 @@ function Home() {
                 // fetch Gallery
                 const galleryResponse = await fetch("http://localhost:1337/api/galleries?populate=*");
                 const galleryData = await galleryResponse.json();
-                console.log("Raw API Gallery Response:", galleryData);
 
                 // process blog images
                 const formattedBlogImages = blogData.data.flatMap(blogItem => {
@@ -44,7 +43,6 @@ function Home() {
                 });
 
                 setBlogImages(formattedBlogImages);
-                console.log("Formatted Blog ImageData:", formattedBlogImages);
 
                 //process images 
                 const formattedGallery = galleryData.data.flatMap(galleryItem => {
@@ -58,10 +56,8 @@ function Home() {
                 });
 
                 setGallery(formattedGallery);
-                console.log("Formatted Gallery Data:", formattedGallery);
 
             } catch (error) {
-                console.error("error fetching data:", error);
             }
         };
 

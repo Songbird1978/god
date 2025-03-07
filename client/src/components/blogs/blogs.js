@@ -9,7 +9,6 @@ const Record = ({ imageUrl }) => {
     const initialSize = 350;
     const scale = 0.96;
 
-    console.log("imageUrl:", imageUrl);
 
     return (
         <div className="record" id="record" style={{ width: `${initialSize}px`, height: `${initialSize}px`, position: 'relative' }}>

@@ -13,13 +13,7 @@ function Discography() {
     return (
 
         <>
-
-
-
             <Album />
-
-
-
         </>
     );
 
