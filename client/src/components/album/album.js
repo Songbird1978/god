@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import '../album/album.css';
 
-function Album(blogs) {
+function Album() {
     return (
 
         <div className="album-container-grid" >
 
             <div className="album" id="album">
                 <Link to="/" >
-                    <img className="albumImg" src={`${blogs}/uploads/Screenshot_2025_01_08_at_19_28_13_b2ff76de43.png`} alt="Gary O' Donnell Three Ways From Nowhere Album cover" width="400px" />
+                    <img className="albumImg" src={`https://res.cloudinary.com/djtvlgplj/image/upload/v1741313307/Screenshot_2025_01_08_at_19_29_13_4ee072f099_69e0a28006.png`} alt="Gary O' Donnell Three Ways From Nowhere Album cover" width="400px" />
                 </Link>
             </div>
 
