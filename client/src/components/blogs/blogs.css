@@ -112,6 +112,7 @@
     transform: rotateY(180deg);
     flex-direction: column;
     padding: 15px;
+    text-wrap: nowrap;
 }
 
 .flip-card-back h2 {
@@ -121,6 +122,7 @@
 .flip-card-back p {
     font-size: 1.2rem;
     color: lightgrey;
+    text-wrap: nowrap;
 }
 
 .read-more {
@@ -176,8 +178,7 @@
     align-items: center;
     padding: 50px;
     transform: (-50%, -50%);
-
-
+    text-wrap: wrap;
 
 }
 

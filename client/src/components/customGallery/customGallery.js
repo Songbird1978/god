@@ -5,6 +5,8 @@ import './customGallery.css';
 
 const CustomGallery = ({ images }) => {
 
+    console.log("Images from Home:", images);
+
 
     return (
         <div className="galleryContainer" >
