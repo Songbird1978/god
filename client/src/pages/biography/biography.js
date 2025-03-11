@@ -8,7 +8,7 @@ import InformationBar from '../../components/informationBar/informationBar.js';
 function Biography({ blogs = [], formattedGallery = [] }) {
     // process images safely
 
-
+    console.log("formattedGallery from home:", formattedGallery);
     return (
 
         <>
