@@ -9,13 +9,28 @@ import Blogs from '../../components/blogs/blogs.js';
 import Subscribe from './subscribe';
 
 
-
-
 function Home() {
 
     const [blogs, setBlogs] = useState([]);
     const [formattedGallery, setGallery] = useState([]);
-    const [formattedBlogImages, setBlogImages] = useState([])
+    const [formattedBlogImages, setBlogImages] = useState([]);
+
+    // 1. Define the filterDuplicates function inside the Home component
+    function filterDuplicates(images) {
+        const seen = new Set();
+        const uniqueImages = [];
+
+        images.forEach(image => {
+            const imageKey = `${image.original}-${image.thumbnail}`;
+
+            if (!seen.has(imageKey)) {
+                uniqueImages.push(image);
+                seen.add(imageKey); // Track this combination as seen
+            }
+        });
+
+        return uniqueImages;
+    }
 
     useEffect(() => {
         // Fetch Blogs
@@ -31,14 +46,12 @@ function Home() {
                 setBlogs(blogData.data || []);
 
                 //check raw blog data
-                console.log("Raw Blog Data:", blogData);
 
                 // fetch Gallery
                 const galleryResponse = await fetch(`${API_URL}/api/galleries?populate=*`);
                 const galleryData = await galleryResponse.json();
 
                 //check raw gallery data
-                console.log("Raw Gallery Data:", galleryData);
 
                 // process blog images
                 const formattedBlogImages = blogData.data.flatMap(blogItem => {
@@ -78,12 +91,14 @@ function Home() {
                     });
                 });
 
-                setGallery(formattedGallery);
-                console.log("formatted gallery items:", formattedGallery);
+                // Filter out duplicates from the gallery images
+                const uniqueGalleryImages = filterDuplicates(formattedGallery);
 
-
+                // update state with unique gallery images
+                setGallery(uniqueGalleryImages);
 
             } catch (error) {
+                console.error("error fetching data:", error);
             }
         };
 
