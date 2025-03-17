@@ -107,6 +107,10 @@
 
 /* Back (Text Content) */
 .flip-card-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     background: black;
     color: lightgrey;
     transform: rotateY(180deg);
@@ -123,6 +127,12 @@
     font-size: 1.2rem;
     color: lightgrey;
     text-wrap: wrap;
+    white-space: normal;
+    /* Ensures text wraps */
+    word-wrap: break-word;
+    /* Breaks long words if needed */
+    overflow-wrap: break-word;
+    /* Ensures breaking happens inside the div */
 }
 
 .read-more {
@@ -258,4 +268,13 @@
     margin-top: 10px;
     justify-content: center;
 
+}
+
+@media (max-width: 768px) {
+    .flip-card-back {
+        width: 90%;
+        /* Adjust width to fit content */
+        font-size: 14px;
+        /* Reduce font size if necessary */
+    }
 }

@@ -32,7 +32,6 @@ function Biography({ blogs = [], formattedGallery = [] }) {
 
                         <b> Track Listing</b>
 
-
                         <br></br><br></br>
                         1. God's Own Country
                         <br></br><br></br>
