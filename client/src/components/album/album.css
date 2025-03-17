@@ -15,7 +15,7 @@
     border: grey 2px;
     box-shadow: 5px 5px 5px 5px rgba(113, 108, 108, 0.75);
     text-decoration: none;
-    min-width: 60vw;
+    min-width: 45vw;
 }
 
 .album {
@@ -30,7 +30,7 @@
     list-style-type: none;
     display: block;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     text-decoration: none;
     color: grey;
 }
