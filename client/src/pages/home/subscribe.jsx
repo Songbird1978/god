@@ -22,7 +22,7 @@ const Subscribe = () => {
                 color="antiquewhite"
             >
                 <InputBase
-                    sx={{ ml: 1, flex: 1 }}
+                    sx={{ ml: 1, flex: 1, backgroundColor: "antiquewhite", fontFamily: "courier" }}
                     placeholder="Enter email"
                     onChange={(e) => setEmail(e.target.value)}
                     value={email}
