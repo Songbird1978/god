@@ -2,9 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 15vh !important;
+    min-height: 10vh !important;
     position: fixed;
-    padding: 35px 35px;
     top: 0px;
     background-color: black;
     width: 100%;

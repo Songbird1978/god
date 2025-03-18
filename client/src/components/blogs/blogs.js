@@ -2,6 +2,7 @@ import React from "react";
 import "./blogs.css";
 import BlogModal from '../blogs/blogModal.js';
 import { useState } from 'react';
+import Contact from '../contact/contact.js';
 
 // Record Component (Reusable)
 const Record = ({ imageUrl }) => {
@@ -63,6 +64,7 @@ const Blogs = ({ blogs = [] }) => {
     return (
         <div className="blogs" >
             <h1 className="title" id="blogs" style={{ width: "100%" }}>Blogs</h1>
+            <h2 className="blogAction">Scroll for more...</h2>
             <div className="blogContainer">
                 {/* Render Blogs */}
                 {blogs.length > 0 ? (
@@ -91,6 +93,7 @@ const Blogs = ({ blogs = [] }) => {
                 ) : (
                     <p>No blogs available.</p>
                 )}
+
             </div>
 
             {/* Modal Overlay */}
@@ -99,6 +102,7 @@ const Blogs = ({ blogs = [] }) => {
                     <BlogModal blog={selectedBlog} handleModalClose={handleModalClose} />
                 </div>
             )}
+            <Contact />
         </div >
 
     );

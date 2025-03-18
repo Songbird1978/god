@@ -48,3 +48,7 @@ input[type=submit] {
     z-index: 1000;
 
 }
+
+.css-18rm664-MuiButtonBase-root-MuiIconButton-root {
+    color: antiquewhite !important;
+}

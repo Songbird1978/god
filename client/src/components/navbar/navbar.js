@@ -82,8 +82,8 @@ function Navbar() {
   return (
     <Box sx={{ display: 'flex', backgroundColor: 'black', marginTop: '0', height: '0vh' }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open} style={{ height: '0vh', className: "navBar", backgroundColor: "black", color: "transparent" }}>
-        <Toolbar className="header" sx={{ backgroundColor: "black", opacity: "100%" }}>
+      <AppBar position="fixed" open={open} style={{ height: '15vh', className: "navBar", backgroundColor: "black", color: "transparent" }}>
+        <Toolbar className="header" sx={{ backgroundColor: "black" }}>
           <IconButton
             color="transparent"
             hover="none"

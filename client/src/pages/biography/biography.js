@@ -1,7 +1,7 @@
 import React from 'react';
 import '../biography/biography.css';
 import CustomGallery from '../../components/customGallery/customGallery.js'; // Adjust the import path based on your project structure
-
+import "../../index.css";
 import InformationBar from '../../components/informationBar/informationBar.js';
 //import ImageList from '../../components/customGallery/imageList.js';
 
@@ -15,8 +15,8 @@ function Biography({ blogs = [], formattedGallery = [] }) {
             <div className="liveGallery">
                 <CustomGallery images={formattedGallery} title="Live Gallery" />
             </div>
-            <div className="about" id="about">
-                <h1 className="heading">About</h1>
+            <div className="about" >
+                <h1 className="heading" id="about">About</h1>
                 <div className="biographyPaper">
                     <p className="biographyParagraph">
                         Born in Portsmouth on Christmas Day, by candle light, placed in a drawer, and delivered by Dr Mary Joseph – Gary O’Donnell, arrived in this world many years ago.<br></br><br></br>

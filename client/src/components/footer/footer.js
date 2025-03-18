@@ -10,36 +10,24 @@ function Footer() {
 
     return (
         <>
-
             <footer className="footerContainer" id="contact">
-
-                <div className="columnOne">
-
-                    <div className="columnOneContact">
-                        <Contact className="columnOneContact" />
-                    </div>
+                <div className="columnOneContact">
+                    <Contact className="columnOneContact" />
                 </div>
-
-                <div className="columnTwo">
+                <div className="columnOne">
                     <Link to="./message" style={{ textDecoration: "none", color: "grey" }}>
                         <div className="button">CONTACT</div>
                     </Link>
                 </div>
-
-                <div className="columnThree">
+                <div className="columnOne">
                     <Link to="./mailingList" style={{ textDecoration: "none", color: "grey" }}>
                         <div className="button">MAILING LIST</div>
                     </Link>
                 </div>
-
-                <div className="columnFour">
-                    <p> © 2024 Gary O'Donnell. <br></br>All rights reserved.<br></br>
-                        Site by <Link to="" style={{ textDecoration: "none", color: "grey" }}>Alker</Link>
-                    </p>
-                </div>
-
+                <p> © 2024 Gary O'Donnell. <br></br>All rights reserved.<br></br>
+                    Site by <Link to="" style={{ textDecoration: "none", color: "antiqueWhite" }}>Alker</Link>
+                </p>
             </footer>
-
         </>
     )
 }

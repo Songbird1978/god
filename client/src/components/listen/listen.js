@@ -6,8 +6,8 @@ import React from 'react';
 function Listen() {
 
     return (
-        <div className="listenEmbedContainer" id="listen" style={{ padding: "30px", color: "grey", backgroundColor: "lightgray" }}>
-            <h1 style={{ width: "100%" }}>Listen</h1>
+        <div className="listenEmbedContainer" id="listen" style={{ padding: "30px", backgroundColor: "black" }}>
+            <h1 style={{ width: "100%", color: "antiqueWhite", fontSize: "50px", fontFamily: "BigShoulder", }}>Listen</h1>
             <iframe style={{ borderRadius: "12px" }}
                 src="https://open.spotify.com/embed/artist/1XJ41uLGgFygsjP44hknkt?utm_source=generator"
                 title="listenSpotify"

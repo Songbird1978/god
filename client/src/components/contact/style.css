@@ -6,21 +6,22 @@
     margin-right: 20px;
     float: right;
     list-style: none;
+    color: antiquewhite;
 }
 
-.icon {
+.icon .contactListItem {
 
     height: 30px;
-    color: silver;
-    opacity: 80%;
+    color: antiquewhite;
 
 }
 
 .icon:hover {
 
-    color: lightgray;
+    color: hotpink;
 
 }
+
 
 .containercontact {
 

@@ -1,14 +1,15 @@
 import { Box, InputBase, Divider, Typography, IconButton } from '@mui/material';
 import MarkEmailReadOutlinedIcon from "@mui/icons-material/MarkEmailReadOutlined";
 import { useState } from 'react';
+import '../home/home.css';
 
 const Subscribe = () => {
     const [email, setEmail] = useState("");
 
     return (
-        <Box width="80%" margin="80px auto" textAlign="center">
-            <IconButton>
-                <MarkEmailReadOutlinedIcon fontSize="large" />
+        <Box width="80%" margin="80px auto" textAlign="center" backgroundColor="black" color="antiquewhite">
+            <IconButton color="antiquewhite !important">
+                <MarkEmailReadOutlinedIcon fontSize="large" color="antiquewhite" />
             </IconButton>
             <Typography variant="h3">Subscribe to my Newsletter</Typography>
             <Box
@@ -17,7 +18,8 @@ const Subscribe = () => {
                 display="flex"
                 alignItems="center"
                 width="75%"
-                backgroundColor="#F2F2F2"
+                backgroundColor="black"
+                color="antiquewhite"
             >
                 <InputBase
                     sx={{ ml: 1, flex: 1 }}

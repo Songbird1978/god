@@ -1,9 +1,10 @@
 .about {
     display: block;
     justify-content: center;
-    background-color: lightgray;
+    background-color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 30px;
+    color: antiquewhite;
     text-align: justify;
     font-size: 1rem;
     z-index: 2;
@@ -11,18 +12,19 @@
 
 .biographyParagraph {
     overflow-clip-margin: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    color: antiquewhite;
 
 }
 
 .biographyPaper {
-    border-radius: 10px;
-    background-color: white;
-    color: grey;
-    border-style: solid;
-    border-color: darkgray;
+    border-radius: 25px;
+    background-color: black;
+    color: antiquewhite;
+    border: solid 3px peru;
     width: 100%;
     height: 80vh;
-    box-shadow: 10px 5px 5px grey;
+    box-shadow: 2px 2px 2px 2px rgba(128, 114, 102, 0.787);
     padding: 50px;
     overflow-y: scroll;
 }
@@ -30,9 +32,10 @@
 .heading {
     display: flex;
     justify-content: left;
-    color: grey;
+    color: antiquewhite;
     text-decoration: none;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: BigShoulder;
+    font-size: 50px;
 }
 
 .name {

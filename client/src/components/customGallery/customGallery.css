@@ -1,3 +1,7 @@
+.galleryContainer {
+    background-color: black;
+}
+
 .imageList {
     display: flex;
     overflow: scroll;
@@ -11,12 +15,12 @@
 
 .image-gallery-icon,
 .image-gallery-svg {
-    color: white;
+    color: antiquewhite;
 }
 
 /* Ensure all images in the gallery have a fixed height */
 .image-gallery-slide img {
-    height: 500px;
+    height: 100vh;
     /* Set a fixed height for all images */
     width: auto;
     /* Maintain aspect ratio */
@@ -28,13 +32,13 @@
 
 /* Thumbnails should also have a fixed height */
 .image-gallery-thumbnails img {
-    height: 100px;
+    height: 80px;
     /* Adjust as needed */
     width: auto;
     object-fit: cover;
 }
 
-::after .image-gallery-thumbnails-bottom ::on-hover {
+.image-gallery-thumbnails-bottom:on-hover {
     color: grey;
     border-color: grey;
 }

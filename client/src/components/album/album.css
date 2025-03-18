@@ -1,23 +1,19 @@
 .album-container-grid {
 
     display: flex;
+    flex-direction: column;
     width: 100%;
     min-height: 100vh;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 50px;
-    padding: 20px;
     background-color: black;
 }
 
 .albumImg {
     border: grey 2px;
-    box-shadow: 5px 5px 5px 5px rgba(113, 108, 108, 0.75);
     text-decoration: none;
-    min-width: 58vw;
-    max-width: 58vw;
-    opacity: 40%;
 
 }
 
@@ -25,36 +21,44 @@
     display: flex;
     justify-content: center;
     list-style-type: none;
-    padding: 15px;
+    width: 100%;
+    min-height: 60vh;
     text-decoration: none;
+    background-image: url("https://res.cloudinary.com/djtvlgplj/image/upload/v1742246230/medium_Gary_O_Donnell_Album_Pic_1f58ebf46b.jpg");
+    background-size: cover;
+    background-repeat: none;
+    background-blend-mode: multiply;
+    background-color: grey;
+    box-shadow: inset 0px 0px 30px 30px rgba(0, 0, 0, 0.9);
 
 }
 
 .buttonsArea {
     list-style-type: none;
-    display: block;
-    justify-content: center;
-    align-items: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-decoration: none;
     color: antiquewhite;
+    width: 100%;
 }
 
 .button {
     display: flex;
     list-style-type: none;
     justify-content: center;
-    border-radius: 10%;
+    border-radius: 25px;
     align-items: center;
     height: 50px;
     width: 150px;
-    border: 1px grey;
-    box-shadow: 3px 3px 3px 3px rgba(113, 108, 108, 0.75);
+    border: 3px solid peru;
+    box-shadow: 2px 2px 2px 2px rgba(128, 114, 102, 0.787);
     text-decoration: none !important;
 }
 
 .albumListdiv {
     padding: 15px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     font-style: bold;
     color: antiquewhite;
     display: flex;
@@ -71,9 +75,16 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-family: 'Lucida Sans',
+        'Lucida Sans Regular',
+        'Lucida Grande',
+        'Lucida Sans Unicode',
+        Geneva,
+        Verdana,
+        sans-serif;
 }
 
-Link button:hover .button:hover a:hover .albumListdiv:hover {
+.button:hover {
     text-decoration: none;
     cursor: pointer;
     box-shadow: none;

@@ -2,11 +2,24 @@
     display: flex;
     justify-content: left;
     width: 100%;
-    background-color: rgb(209, 134, 134);
-    color: hsl(0, 34%, 86%);
+    font-family: BigShoulder;
+    font-size: 50px;
+    background-color: peru;
+    color: antiquewhite;
     padding: 30px;
     text-align: justify;
     margin: 0;
+}
+
+.blogAction {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: peru;
+    color: antiquewhite;
+    text-align: right;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding-right: 30px;
 }
 
 .record {
@@ -41,8 +54,8 @@
 .blogContainer {
     display: flex;
     width: 100%;
-    height: 100%;
-    background-color: rgb(209, 134, 134);
+    height: 80vh;
+    background-color: peru;
     color: hsl(0, 34%, 86%);
     overflow-x: auto;
     white-space: nowrap;
@@ -61,6 +74,7 @@
     width: 350px;
     display: inline-block;
 }
+
 
 
 

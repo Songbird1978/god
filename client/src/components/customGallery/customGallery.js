@@ -13,7 +13,7 @@ const CustomGallery = ({ images }) => {
             {images.length > 0 ? (
                 <ImageGallery
 
-                    height="150px"
+                    height="80vh"
                     width="auto"
                     items={images}
                     showThumbnails={true}

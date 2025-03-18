@@ -22,7 +22,7 @@
 .tickerContainer {
     width: 100%;
     overflow: hidden;
-    background: rgb(83, 82, 82);
+    background: black;
     /* Adjust to match your design */
     color: hsl(0, 34%, 86%);
     padding: 10px 0;
