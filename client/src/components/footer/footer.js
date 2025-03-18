@@ -1,6 +1,6 @@
 import React from 'react';
 import './footer.css';
-import NavOptions from '../navbar/navOptions';
+//import NavOptions from '../navbar/navOptions';
 import Contact from '../contact/contact';
 import { Link } from 'react-router-dom';
 
@@ -14,9 +14,7 @@ function Footer() {
             <footer className="footerContainer" id="contact">
 
                 <div className="columnOne">
-                    <div className="columnOneNav">
-                        <NavOptions className="columnOneNav" />
-                    </div>
+
                     <div className="columnOneContact">
                         <Contact className="columnOneContact" />
                     </div>

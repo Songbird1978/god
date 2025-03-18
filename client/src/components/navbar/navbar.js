@@ -16,9 +16,10 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Link } from 'react-router-dom';
 import './style.css';
 import Logo from '../logo/logo';
+import NavOptions from '../navbar/navOptions.js';
 
 
-const drawerWidth = 250;
+const drawerWidth = 300;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
@@ -48,7 +49,7 @@ const AppBar = styled(MuiAppBar, {
   }),
   ...(open && {
     width: `calc(100% - ${drawerWidth}px)`,
-    marginRight: `${drawerWidth}px`,
+    marginLeft: `${drawerWidth}px`,
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
@@ -79,19 +80,10 @@ function Navbar() {
 
 
   return (
-    <Box sx={{ display: 'flex', backgroundColor: 'transparent', marginTop: '0', height: '0vh' }}>
+    <Box sx={{ display: 'flex', backgroundColor: 'black', marginTop: '0', height: '0vh' }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open} style={{ height: '0vh', className: "navBar", backgroundColor: "transparent", color: "transparent" }}>
-        <Toolbar className="header" sx={{ backgroundColor: "grey", opacity: "100%" }}>
-          <Logo
-            onClick={() => {
-              handleDrawerClose();  // Call the function
-              window.location.replace("/#album");  // Perform the redirect
-            }}
-            style={{ textDecoration: 'none', cursor: 'pointer', color: 'white' }}
-
-          >
-          </Logo>
+      <AppBar position="fixed" open={open} style={{ height: '0vh', className: "navBar", backgroundColor: "black", color: "transparent" }}>
+        <Toolbar className="header" sx={{ backgroundColor: "black", opacity: "100%" }}>
           <IconButton
             color="transparent"
             hover="none"
@@ -100,10 +92,15 @@ function Navbar() {
             onClick={handleDrawerOpen}
             edge="start"
             size="large"
-            sx={{ mr: 2, ...(open && { display: 'none' }) }}
+            position="left"
+            sx={{ ml: 2, ...(open && { display: 'none' }) }}
           >
             <MenuIcon className="burger" />
           </IconButton>
+          <div className="logoDiv">
+            <NavOptions open={open} />
+          </div>
+
         </Toolbar>
       </AppBar>
       <Drawer
@@ -112,13 +109,12 @@ function Navbar() {
           flexShrink: 0,
           '& .MuiDrawer-paper': {
             width: drawerWidth,
-            backgroundColor: 'grey',
-            opacity: '90%',
+            backgroundColor: 'black',
             boxSizing: 'border-box',
           },
         }}
         variant="temporary"
-        anchor="right"
+        anchor="left"
         open={open}
       >
         <DrawerHeader>

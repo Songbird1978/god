@@ -10,6 +10,7 @@ import Navbar from "./components/navbar/navbar";
 import Footer from './components/footer/footer';
 import MailingList from './pages/forms/mailingList';
 import Message from './pages/forms/message';
+import './index.css';
 
 function App() {
   const location = useLocation();

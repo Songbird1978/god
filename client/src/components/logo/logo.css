@@ -1,7 +1,12 @@
 .logo {
 
     text-decoration: none;
-    color: rgb(209, 134, 134);
-    font-size: 2.5vw;
+    color: antiquewhite;
+    font-size: 28px;
     text-align: center;
+    font-family: BigShoulder;
+}
+
+span {
+    color: peru;
 }

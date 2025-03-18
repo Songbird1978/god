@@ -24,18 +24,6 @@
     flex-direction: column;
 }
 
-.columnOneNav {
-
-    display: inline-flex;
-    flex-direction: row;
-    padding: 5px;
-    font-size: 15px;
-    list-style-type: none;
-    color: #403434;
-    text-decoration: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    justify-content: space-evenly;
-}
 
 .columnOneContact {
 

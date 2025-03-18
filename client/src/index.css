@@ -1,0 +1,15 @@
+/* Flood standard*/
+
+@font-face {
+    font-family: 'Flood';
+    src: url('./fonts/FloodStdRegular.otf') format('OpenType');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BigShoulder';
+    src: url('./fonts/BigShouldersStencilVariableFont_opszwght.ttf');
+    font-weight: 900;
+    font-style: normal;
+}

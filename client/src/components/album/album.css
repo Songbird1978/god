@@ -5,17 +5,20 @@
     min-height: 100vh;
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
-    margin-bottom: 150px;
+    margin-top: 100px;
+    margin-bottom: 50px;
     padding: 20px;
-
+    background-color: black;
 }
 
 .albumImg {
     border: grey 2px;
     box-shadow: 5px 5px 5px 5px rgba(113, 108, 108, 0.75);
     text-decoration: none;
-    min-width: 45vw;
+    min-width: 58vw;
+    max-width: 58vw;
+    opacity: 40%;
+
 }
 
 .album {
@@ -24,6 +27,7 @@
     list-style-type: none;
     padding: 15px;
     text-decoration: none;
+
 }
 
 .buttonsArea {
@@ -32,7 +36,7 @@
     justify-content: center;
     align-items: end;
     text-decoration: none;
-    color: grey;
+    color: antiquewhite;
 }
 
 .button {
@@ -52,7 +56,7 @@
     padding: 15px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: bold;
-    color: grey;
+    color: antiquewhite;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,8 +66,8 @@
 }
 
 .actionTitle {
-    font-size: 40px;
-    color: grey;
+    font-size: 2em;
+    color: antiquewhite;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -75,13 +79,11 @@ Link button:hover .button:hover a:hover .albumListdiv:hover {
     box-shadow: none;
 }
 
-
-
 @media (max-width: 640px) {
 
     .album-container-grid {
 
-        margin-top: 50px;
+        margin-top: 100px;
         display: block;
         width: 100%;
         height: 100%;

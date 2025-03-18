@@ -7,7 +7,7 @@ function Logo({ onClick }) {
   return (
 
     <div onClick={onClick} style={{ cursor: "pointer" }} className="logo">
-      Gary O'Donnell
+      <span>G</span>ary<span>O</span>'<span>D</span>onnell
     </div>
   );
 }
