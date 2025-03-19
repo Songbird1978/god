@@ -63,8 +63,8 @@ const Blogs = ({ blogs = [] }) => {
 
     return (
         <div className="blogs" >
-            <h1 className="title" id="blogs" style={{ width: "100%" }}>Blogs</h1>
-            <h2 className="blogAction">Scroll for more...</h2>
+            <div className="title" id="blogs" style={{ width: "100%" }}>Blogs</div>
+            <div className="blogAction">Scroll for more...</div>
             <div className="blogContainer">
                 {/* Render Blogs */}
                 {blogs.length > 0 ? (
