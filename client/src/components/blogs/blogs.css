@@ -1,3 +1,7 @@
+.blogs {
+    padding: 60px;
+}
+
 .title {
     display: flex;
     justify-content: left;
@@ -76,8 +80,6 @@
 }
 
 
-
-
 .flip-card-container {
 
     width: 360px;
@@ -126,7 +128,7 @@
     align-items: center;
     text-align: center;
     background: black;
-    color: lightgrey;
+
     transform: rotateY(180deg);
     flex-direction: column;
     padding: 15px;
@@ -134,12 +136,26 @@
 }
 
 .flip-card-back h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    color: peru;
+    text-wrap: wrap;
+}
+
+.flip-card-back-title .blogTitle {
+
+    font-family: BigShoulder;
+    color: peru;
+    text-wrap: wrap;
+    overflow-wrap: break-word;
+    white-space: normal;
+    overflow: contain;
+
 }
 
 .flip-card-back p {
-    font-size: 1.2rem;
-    color: lightgrey;
+    font-size: 1.1rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: antiquewhite;
     text-wrap: wrap;
     white-space: normal;
     /* Ensures text wraps */
@@ -152,7 +168,7 @@
 .read-more {
     margin-top: 10px;
     padding: 8px 12px;
-    background: lightgrey;
+    background: antiquewhite;
     color: black;
     border: none;
     cursor: pointer;
@@ -177,33 +193,30 @@
 .modalContainer {
     position: fixed;
     display: flex;
-    width: min(80vw), max(80vw);
-    height: min(80vh), max(80vh);
     background-color: transparent;
     justify-content: center;
     z-index: 3000;
     transition: height, width 0.5s;
+    align-items: center;
 }
 
 .blogModal {
-    width: 100%;
-    max-width: 800px;
+    max-width: 80vw;
     border-radius: 50%;
-    border-style: solid;
-    border-width: 0.5px;
-    border-color: rgb(49, 48, 48);
+    border: solid 3px peru;
     aspect-ratio: 1 / 1;
     background-color: black;
     box-shadow: 10px 5px 5px rgb(32, 29, 29);
-    color: grey;
+    font-family: 'Courier New', Courier, monospace;
+    color: antiquewhite;
     overflow-x: scroll;
     overflow-y: scroll;
+    scrollbar-color: transparent;
     justify-content: center;
     align-items: center;
     padding: 50px;
     transform: (-50%, -50%);
     text-wrap: wrap;
-
 }
 
 .closeIcon {
@@ -211,13 +224,9 @@
     width: 2em !important;
     height: 2em !important;
     cursor: pointer;
-    background-color: black;
+    color: antiquewhite;
 }
 
-.closeIconBox {
-    background-color: black;
-    padding: 10px;
-}
 
 .closeIconBox,
 .picBox {
@@ -228,7 +237,8 @@
 
 .blogTitle {
     text-align: center;
-
+    font-family: BigShoulder;
+    color: peru;
 }
 
 .blogArticle .blogDate p {

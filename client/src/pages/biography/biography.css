@@ -3,7 +3,7 @@
     justify-content: center;
     background-color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 30px;
+    padding: 60px;
     color: antiquewhite;
     text-align: justify;
     font-size: 1rem;
@@ -36,6 +36,7 @@
     text-decoration: none;
     font-family: BigShoulder;
     font-size: 50px;
+    margin-top: 50px;
 }
 
 .name {

@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mailing_list_submissions",
+  "info": {
+    "singularName": "mailing-list-submission",
+    "pluralName": "mailing-list-submissions",
+    "displayName": "mailingListSubmission"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "surname": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    }
+  }
+}

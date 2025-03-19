@@ -13,7 +13,7 @@ const BlogModal = ({ blog, index, handleModalClose }) => {
         <div key={index} className="modalContainer">
             <div className="blogModal">
                 <div className="closeIconBox">
-                    <CloseIcon className="closeIcon" onClick={handleModalClose} style={{ color: "grey" }} />
+                    <CloseIcon className="closeIcon" onClick={handleModalClose} style={{ color: "antiquewhite" }} />
                 </div>
                 <div className="picBox">
                     <img className="pic" style={{ width: "auto", height: "auto" }} src={(`${blog.images[0].formats?.thumbnail?.url}`)} alt={blog.Name}></img>

@@ -3,6 +3,7 @@ import "./blogs.css";
 import BlogModal from '../blogs/blogModal.js';
 import { useState } from 'react';
 import Contact from '../contact/contact.js';
+import '../../index.css';
 
 // Record Component (Reusable)
 const Record = ({ imageUrl }) => {
@@ -62,49 +63,51 @@ const Blogs = ({ blogs = [] }) => {
 
 
     return (
-        <div className="blogs" >
-            <div className="title" id="blogs" style={{ width: "100%" }}>Blogs</div>
-            <div className="blogAction">Scroll for more...</div>
-            <div className="blogContainer">
-                {/* Render Blogs */}
-                {blogs.length > 0 ? (
-                    blogs.map((blog, index) => {
-                        const imageUrl = blog.images?.length > 0
-                            ? `${blog.images[0].formats?.thumbnail?.url || blog.images[0].url}`
-                            : ""; //Fallback if no image
+        <>
 
-                        return (
-                            <div key={index} className="blogItem flip-card-container" >
-                                <div className="flip-card">
-                                    {/* Front side - Record - Render Record with Blog's image and grooves*/}
-                                    <div className="flip-card-front">
-                                        <Record imageUrl={imageUrl} />
-                                    </div>
-                                    {/* Back side - blog Info */}
-                                    <div groovecount="0" className="flip-card-back">
-                                        <h2>{blog.Name}</h2>
-                                        <p>{blog.shortDescription}</p>
-                                        <button onClick={() => openModal(blog) & console.log("openModalClicked:", true)} className="read-more">Read More</button>
+            <div className="blogs" id="blogs" >
+                <div className="title" style={{ width: "100%" }}>Blogs</div>
+                <div className="blogAction">Scroll for more...</div>
+                <div className="blogContainer">
+                    {/* Render Blogs */}
+                    {blogs.length > 0 ? (
+                        blogs.map((blog, index) => {
+                            const imageUrl = blog.images?.length > 0
+                                ? `${blog.images[0].formats?.thumbnail?.url || blog.images[0].url}`
+                                : ""; //Fallback if no image
+
+                            return (
+                                <div key={index} className="blogItem flip-card-container" >
+                                    <div className="flip-card">
+                                        {/* Front side - Record - Render Record with Blog's image and grooves*/}
+                                        <div className="flip-card-front">
+                                            <Record imageUrl={imageUrl} />
+                                        </div>
+                                        {/* Back side - blog Info */}
+                                        <div groovecount="0" className="flip-card-back">
+                                            <h2 className="flip-card-back-title blogTitle">{blog.Name}</h2>
+                                            <p>{blog.shortDescription}</p>
+                                            <button onClick={() => openModal(blog) & console.log("openModalClicked:", true)} className="read-more">Read More</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        );
-                    })
-                ) : (
-                    <p>No blogs available.</p>
-                )}
+                            );
+                        })
+                    ) : (
+                        <p>No blogs available.</p>
+                    )}
 
-            </div>
-
-            {/* Modal Overlay */}
-            {selectedBlog && (
-                <div className="modalOverlay" onClick={handleModalClose}>
-                    <BlogModal blog={selectedBlog} handleModalClose={handleModalClose} />
                 </div>
-            )}
-            <Contact />
-        </div >
 
+                {/* Modal Overlay */}
+                {selectedBlog && (
+                    <div className="modalOverlay" onClick={handleModalClose}>
+                        <BlogModal blog={selectedBlog} handleModalClose={handleModalClose} />
+                    </div>
+                )}
+                <Contact />
+            </div >
+        </>
     );
 };
 

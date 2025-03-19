@@ -15,8 +15,8 @@ function Biography({ blogs = [], formattedGallery = [] }) {
             <div className="liveGallery">
                 <CustomGallery images={formattedGallery} title="Live Gallery" />
             </div>
-            <div className="about" >
-                <h1 className="heading" id="about">About</h1>
+            <div className="about" id="about" >
+                <div className="heading" >About</div>
                 <div className="biographyPaper">
                     <p className="biographyParagraph">
                         Born in Portsmouth on Christmas Day, by candle light, placed in a drawer, and delivered by Dr Mary Joseph – Gary O’Donnell, arrived in this world many years ago.<br></br><br></br>
