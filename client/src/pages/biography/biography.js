@@ -5,6 +5,7 @@ import "../../index.css";
 import InformationBar from '../../components/informationBar/informationBar.js';
 //import ImageList from '../../components/customGallery/imageList.js';
 
+
 function Biography({ blogs = [], formattedGallery = [] }) {
     // process images safely
 
@@ -58,6 +59,7 @@ function Biography({ blogs = [], formattedGallery = [] }) {
                         PLEASE NOTE:  This album has a PARENTAL ADVISORY Notice attached to it because two of the tracks* have sweary type words in them.
                     </p>
                 </div>
+
             </div>
 
             <InformationBar blogs={blogs} />

@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import './mail.css';
 import { yupResolver } from '@hookform/resolvers/yup';
+import GoToTop from '../../goToTop.js';
 
 
 
@@ -41,11 +42,12 @@ export const Message = () => {
                     <label htmlFor="email" >Email</label><br></br>
                     <input {...register("email")} type="email" id="email" placeholder="Your Email..." ></input><br></br><br></br>
                     <label htmlFor="message" >Message:</label><br></br>
-                    <textarea {...register("message")} type="messsage" id="message" placeholder="Type your message here..."  rows="6" maxLength="3000"></textarea><br></br><br></br>
+                    <textarea {...register("message")} type="messsage" id="message" placeholder="Type your message here..." rows="6" maxLength="3000"></textarea><br></br><br></br>
                     <p>{errors.email?.message}</p>
                     <input type="submit" name="Submit" ></input><br></br><br></br>
                 </form>
             </div>
+            <GoToTop />
         </div>
     )
 }

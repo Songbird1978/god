@@ -10,21 +10,23 @@
     width: 70%;
     height: auto;
     justify-content: center;
-    border: solid grey 2px;
-    background-color: rgb(199, 191, 191);
+    border: solid peru 2px;
+    border-radius: 25px;
+    background-color: black;
     text-align: center;
     padding: 10px;
+    margin-top: 20px;
 
 }
 
 .formElements {
-    color: #776c6c;
+    color: antiquewhite;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
 
 .formValue {
-    color: lightgray;
+    color: antiquewhite;
 }
 
 input[type=text],
@@ -45,7 +47,7 @@ textarea {
 input[type=submit] {
 
     padding: 12px 20px;
-    color: #776c6c;
+    color: peru;
     z-index: 1000;
 
 }

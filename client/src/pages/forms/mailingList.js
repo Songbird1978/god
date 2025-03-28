@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import './mail.css';
 import { yupResolver } from '@hookform/resolvers/yup';
+import GoToTop from '../../goToTop.js';
 
 
 export const MailingList = () => {
@@ -40,6 +41,7 @@ export const MailingList = () => {
                     <input type="submit" className="submit" name="submit"></input><br></br><br></br>
                 </form>
             </div>
+            <GoToTop />
         </div>
     )
 }

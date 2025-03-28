@@ -8,6 +8,7 @@ import { Parallelogram } from "@phosphor-icons/react";
 import { InstagramLogo } from '@phosphor-icons/react';
 import '../footer/footer.css';
 
+
 function Contact() {
 
     return (
@@ -51,6 +52,7 @@ function Contact() {
                     </a>
                 </li>
             </ul>
+
         </div>
     )
 }
