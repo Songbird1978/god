@@ -19,7 +19,7 @@ import Logo from '../logo/logo';
 import NavOptions from '../navbar/navOptions.js';
 
 
-const drawerWidth = 300;
+const drawerWidth = 200;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({

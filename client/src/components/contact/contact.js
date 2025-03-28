@@ -4,7 +4,7 @@ import { FacebookLogo } from "@phosphor-icons/react";
 import { EnvelopeSimple } from "@phosphor-icons/react";
 import { YoutubeLogo } from "@phosphor-icons/react";
 //import { SoundcloudLogo } from "@phosphor-icons/react";
-//import { Parallelogram } from "@phosphor-icons/react";
+import { Parallelogram } from "@phosphor-icons/react";
 import { InstagramLogo } from '@phosphor-icons/react';
 import '../footer/footer.css';
 
@@ -34,11 +34,12 @@ function Contact() {
                         <YoutubeLogo className="icon" weight="bold" />
                     </a>
                 </li>
-                {/* <li className="contactListItem">
-                    <a href="@">
+                <li className="contactListItem">
+                    <a href="https://garyodonnellthedimestoreheroes.bandcamp.com/">
                         <Parallelogram className="icon" weight="bold" />
                     </a>
                 </li>
+                {/*
                 <li className="contactListItem">
                     <a href="@">
                         <SoundcloudLogo className="icon" weight="bold" />

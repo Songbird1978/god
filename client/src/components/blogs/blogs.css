@@ -1,5 +1,6 @@
 .blogs {
-    padding: 60px;
+    padding-top: 60px;
+
 }
 
 .title {
@@ -201,7 +202,8 @@
 }
 
 .blogModal {
-    max-width: 80vw;
+    margin-top: 150px;
+    max-width: 90vw;
     border-radius: 50%;
     border: solid 3px peru;
     aspect-ratio: 1 / 1;
