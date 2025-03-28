@@ -471,6 +471,38 @@ export interface ApiMailingListSubmissionMailingListSubmission
   };
 }
 
+export interface ApiMessageSubmissionMessageSubmission
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'message_submissions';
+  info: {
+    displayName: 'message-submission';
+    pluralName: 'message-submissions';
+    singularName: 'message-submission';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email;
+    firstName: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::message-submission.message-submission'
+    > &
+      Schema.Attribute.Private;
+    message: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    surname: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   collectionName: 'products';
   info: {
@@ -1020,6 +1052,7 @@ declare module '@strapi/strapi' {
       'api::blog.blog': ApiBlogBlog;
       'api::gallery.gallery': ApiGalleryGallery;
       'api::mailing-list-submission.mailing-list-submission': ApiMailingListSubmissionMailingListSubmission;
+      'api::message-submission.message-submission': ApiMessageSubmissionMessageSubmission;
       'api::product.product': ApiProductProduct;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
