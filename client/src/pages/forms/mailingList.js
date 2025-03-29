@@ -18,7 +18,7 @@ export const MailingList = () => {
         resolver: yupResolver(schema),
     });
 
-    const onSubmit = (data) => {
+    const onSubmit = async (data) => {
         console.log(data);
     }
 
