@@ -475,7 +475,7 @@ export interface ApiMessageSubmissionMessageSubmission
   extends Struct.CollectionTypeSchema {
   collectionName: 'message_submissions';
   info: {
-    displayName: 'message-submission';
+    displayName: 'messageSubmission';
     pluralName: 'message-submissions';
     singularName: 'message-submission';
   };
@@ -486,6 +486,7 @@ export interface ApiMessageSubmissionMessageSubmission
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
     email: Schema.Attribute.Email;
     firstName: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;

@@ -4,7 +4,7 @@
   "info": {
     "singularName": "message-submission",
     "pluralName": "message-submissions",
-    "displayName": "message-submission"
+    "displayName": "messageSubmission"
   },
   "options": {
     "draftAndPublish": true
@@ -19,6 +19,9 @@
     },
     "email": {
       "type": "email"
+    },
+    "date": {
+      "type": "date"
     },
     "message": {
       "type": "text"
