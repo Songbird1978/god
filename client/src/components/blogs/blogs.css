@@ -24,6 +24,8 @@
     width: 100%;
     height: 100%;
     margin: 0;
+    font-weight: bold;
+    font-size: x-large;
     padding-right: 30px;
 }
 
@@ -174,6 +176,7 @@
     border: none;
     cursor: pointer;
     border-radius: 5px;
+
 }
 
 /*blogModal CSS*/
@@ -203,7 +206,7 @@
 
 .blogModal {
     margin-top: 50px;
-    max-width: 50vw;
+    max-width: 70vw;
     border-radius: 50%;
     border: solid 3px peru;
     aspect-ratio: 1 / 1;
@@ -308,7 +311,7 @@
 
 @media (max-width: 390px) {
     .blogModal {
-        width: 80vw;
+        min-width: 100vw;
         /* Adjust width to fit content */
 
     }
