@@ -299,9 +299,17 @@
 
 @media (max-width: 768px) {
     .flip-card-back {
-        width: 90%;
+        width: 100%;
         /* Adjust width to fit content */
         font-size: 14px;
         /* Reduce font size if necessary */
+    }
+}
+
+@media (max-width: 390px) {
+    .blogModal {
+        width: 80vw;
+        /* Adjust width to fit content */
+
     }
 }
