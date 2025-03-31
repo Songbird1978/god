@@ -309,7 +309,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .blogModal {
         min-width: 100vw;
         /* Adjust width to fit content */
