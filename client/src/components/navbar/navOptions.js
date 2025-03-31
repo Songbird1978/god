@@ -36,7 +36,7 @@ function NavOptions(handleDrawerClose) {
                 </li>
                 <li  >
                     <div className="columnOneNav navOption">
-                        <Link to="https://www.ebay.co.uk/itm/335571305995" style={{ textDecoration: 'none', cursor: "pointer", color: "antiquewhite" }}>
+                        <Link to="https://garyodonnellthedimestoreheroes.bandcamp.com/album/three-ways-from-nowhere" style={{ textDecoration: 'none', cursor: "pointer", color: "antiquewhite" }}>
                             STORE
                         </Link>
                     </div>

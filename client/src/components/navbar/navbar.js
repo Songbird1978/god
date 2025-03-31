@@ -168,7 +168,7 @@ function Navbar() {
           </ListItem>
           <Divider />
           <ListItem>
-            <Link to="https://www.ebay.co.uk/itm/335571305995" style={{ textDecoration: 'none', color: 'white' }} onClick={handleDrawerClose}>STORE</Link>
+            <Link to="https://garyodonnellthedimestoreheroes.bandcamp.com/album/three-ways-from-nowhere" style={{ textDecoration: 'none', color: 'white' }} onClick={handleDrawerClose}>STORE</Link>
           </ListItem>
           <Divider />
 
