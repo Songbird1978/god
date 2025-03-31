@@ -15,7 +15,7 @@ function Album() {
             <div className='buttonsArea'>
                 <div className="albumListdiv, actionTitle" id="albumStatement">
                     NEW ALBUM AVAILABLE NOW</div >
-                <a href="https://www.ebay.co.uk/itm/335571305995" className="albumListdiv">
+                <a href="https://garyodonnellthedimestoreheroes.bandcamp.com/album/three-ways-from-nowhere" className="albumListdiv">
                     <div className="button">BUY </div>
                 </a>
                 <div className="albumListdiv">
