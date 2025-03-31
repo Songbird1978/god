@@ -202,8 +202,8 @@
 }
 
 .blogModal {
-    margin-top: 150px;
-    max-width: 70vw;
+    margin-top: 50px;
+    max-width: 50vw;
     border-radius: 50%;
     border: solid 3px peru;
     aspect-ratio: 1 / 1;
@@ -251,6 +251,7 @@
 
 .blogArticle {
     text-align: justify;
+
 }
 
 .pic {

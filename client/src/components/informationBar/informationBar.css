@@ -42,7 +42,7 @@
 .tickerContent {
     display: inline-block;
     white-space: nowrap;
-    animation: tickerMove 70s linear infinite;
+    animation: tickerMove 35s linear infinite;
 }
 
 .tickerItem {
