@@ -25,6 +25,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
     flexGrow: 1,
     padding: theme.spacing(3),
+    color: "#faebd7",
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -129,7 +130,7 @@ function Navbar() {
           style={{ fontSize: "10px", textDecoration: 'none', cursor: 'pointer' }}
           id="drawerLogo"></Logo>
         {/* this is where the menus start */}
-        <List className='nav' style={{ backgroundColor: 'transparent', opacity: '80%', justifyContent: "center" }}>
+        <List className='nav' style={{ backgroundColor: 'transparent', opacity: '80%', justifyContent: "center", color: "#faebd7"; }}>
           <ListItem className="listItem">
             <div
               className="listItem"
@@ -137,7 +138,7 @@ function Navbar() {
                 handleDrawerClose();  // Call the function
                 window.location.replace("/#about");  // Perform the redirect
               }}
-              style={{ textDecoration: 'none', cursor: 'pointer' }}
+              style={{ textDecoration: 'none', cursor: 'pointer', color: "#faebd7" }}
             >
               ABOUT
             </div>
@@ -151,7 +152,7 @@ function Navbar() {
                 handleDrawerClose();  // Call the function
                 window.location.replace("/#blogs");  // Perform the redirect
               }}
-              style={{ textDecoration: 'none', cursor: 'pointer' }}
+              style={{ textDecoration: 'none', cursor: 'pointer', color: "#faebd7" }}
             >
               BLOGS
             </div>
@@ -164,7 +165,7 @@ function Navbar() {
                 handleDrawerClose();  // Call the function
                 window.location.replace("/#tour");  // Perform the redirect
               }}
-              style={{ textDecoration: 'none', cursor: 'pointer' }}
+              style={{ textDecoration: 'none', cursor: 'pointer', color: "#faebd7" }}
             >
               TOUR
             </div>
@@ -177,7 +178,7 @@ function Navbar() {
                 handleDrawerClose();  // Call the function
                 window.location.replace("/#listen");  // Perform the redirect
               }}
-              style={{ textDecoration: 'none', cursor: 'pointer' }}
+              style={{ textDecoration: 'none', cursor: 'pointer', color: "#faebd7" }}
             >
               LISTEN
             </div>
@@ -188,7 +189,7 @@ function Navbar() {
               className="listItem"
               to="https://garyodonnellthedimestoreheroes.bandcamp.com/album/three-ways-from-nowhere" target="_blank"
               rel="noopener noreferrer"
-              style={{ textDecoration: 'none', color: 'white' }}
+              style={{ textDecoration: 'none', color: "#faebd7" }}
               onClick={handleDrawerClose}>STORE</Link>
           </ListItem>
           <Divider />
@@ -199,7 +200,7 @@ function Navbar() {
                 handleDrawerClose();  // Call the function
                 window.location.replace("/#contact");  // Perform the redirect
               }}
-              style={{ textDecoration: 'none', cursor: 'pointer' }}
+              style={{ textDecoration: 'none', cursor: 'pointer', color: "#faebd7" }}
             >
               CONTACT
             </div>
@@ -212,7 +213,7 @@ function Navbar() {
                 handleDrawerClose();  // Call the function
                 window.location.replace("/#gallery");  // Perform the redirect
               }}
-              style={{ textDecoration: 'none', cursor: 'pointer' }}
+              style={{ textDecoration: 'none', cursor: 'pointer', color: "#faebd7" }}
             >
               GALLERY
             </div>
