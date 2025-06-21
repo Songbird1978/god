@@ -1,15 +1,86 @@
-import { Box, InputBase, Divider, Typography, IconButton } from '@mui/material';
+import { Box, InputBase, Typography, IconButton } from '@mui/material';
 import MarkEmailReadOutlinedIcon from "@mui/icons-material/MarkEmailReadOutlined";
 import { useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 import '../home/home.css';
 
 const Subscribe = () => {
     const [email, setEmail] = useState("");
+    const [recaptchaToken, setRecaptchaToken] = useState(null);
+    const [loading, setLoading] = useState(false);
+    const [submittedEmails, setSubmittedEmails] = useState(new Set());
+
+    const handleCaptchaChange = (token) => {
+        setRecaptchaToken(token);
+    };
+
+    const handleSubscribe = async () => {
+        if (!email) {
+            alert("Please enter your email.");
+            return;
+        }
+
+        if (submittedEmails.has(email)) {
+            alert("You've already submitted this email.");
+            return;
+        }
+
+        if (!recaptchaToken) {
+            alert("Please complete the CAPTCHA.");
+            return;
+        }
+
+
+        setLoading(true);
+
+        try {
+            const response = await fetch("http://localhost:1337/api/mailing-list-submissions", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    data: {
+                        email,
+                        recaptchaToken
+                    }
+                })
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                const errorMessage = result?.error?.message || result?.message || "Unknown error";
+
+                if (errorMessage.toLowerCase().includes("unique")) {
+                    alert("You're already subscribed with this email.");
+                }
+
+                if (errorMessage.toLowerCase().includes("already subscribed")) {
+                    alert("You're already subscribed with this email.");
+
+                } else if (errorMessage.toLowerCase().includes("recaptcha")) {
+                    alert("CAPTCHA verification failed. Please try again.");
+                } else {
+                    alert(`Subscription failed: ${errorMessage}`);
+                }
+
+                throw new Error(errorMessage);
+            }
+
+            alert("Subscribed successfully!");
+            setSubmittedEmails(new Set([...submittedEmails, email]));
+            setEmail("");
+            setRecaptchaToken(null);
+        } catch (error) {
+            console.error("Subscription failed:", error);
+        } finally {
+            setLoading(false);
+        }
+    };
 
     return (
         <Box width="80%" margin="80px auto" textAlign="center" backgroundColor="black" color="antiquewhite">
-            <IconButton color="antiquewhite !important">
-                <MarkEmailReadOutlinedIcon fontSize="large" color="antiquewhite" />
+            <IconButton>
+                <MarkEmailReadOutlinedIcon fontSize="large" style={{ color: "antiquewhite" }} />
             </IconButton>
             <Typography variant="h3">Subscribe to my Newsletter</Typography>
             <Box
@@ -17,24 +88,44 @@ const Subscribe = () => {
                 m="15px auto"
                 display="flex"
                 alignItems="center"
+                justifyContent="center"
                 width="75%"
+                flexWrap="wrap"
                 backgroundColor="black"
                 color="antiquewhite"
             >
                 <InputBase
-                    sx={{ ml: 1, flex: 1, backgroundColor: "antiquewhite", fontFamily: "courier" }}
+                    sx={{
+                        ml: 1,
+                        flex: 1,
+                        backgroundColor: "antiquewhite",
+                        fontFamily: "courier",
+                        padding: "6px 12px",
+                        borderRadius: "4px"
+                    }}
                     placeholder="Enter email"
                     id="subscribeToMailingList"
                     onChange={(e) => setEmail(e.target.value)}
                     value={email}
                 />
-                <Divider sx={{ height: 28, m: 0.5 }} orientaton="vertical" />
-                <Typography sx={{ p: "10px", ":hover": { cursor: "pointer" } }}>Subscribe</Typography>
+                <Typography
+                    sx={{
+                        p: "10px",
+                        ":hover": { cursor: "pointer", color: "lightgray" }
+                    }}
+                    onClick={handleSubscribe}
+                >
+                    {loading ? "Submitting..." : "Subscribe"}
+                </Typography>
+                <Box mt={2} width="100%" display="flex" justifyContent="center">
+                    <ReCAPTCHA
+                        sitekey="6LeVK2grAAAAADLvjZlJpuEKJJG627TzKk5dpgOc"
+                        onChange={handleCaptchaChange}
+                    />
+                </Box>
             </Box>
         </Box>
-
-    )
-
-}
+    );
+};
 
 export default Subscribe;

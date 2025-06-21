@@ -34,15 +34,38 @@ module.exports = createCoreController('api::mailing-list-submission.mailing-list
             });
 
             const json = await response.json();
+            console.log('reCAPTCHA response:', json);
 
             if (!json.success || (json.score && json.score < 0.5)) {
                 return ctx.badRequest('Failed reCAPTCHA verification');
             }
 
+            const existing = await strapi.db.query('api::mailing-list-submission.mailing-list-submission').findOne({
+                where: { email: formData.email },
+            });
+
+            if (existing) {
+                return ctx.badRequest('This email is already subscribed.');
+            }
+
             ctx.request.body.data = formData;
-            return await super.create(ctx);
+
+            try {
+                return await super.create(ctx);
+
+            } catch (error) {
+                const errorMessage = error?.message || '';
+
+                if (errorMessage.toLowerCase().includes('unique')) {
+                    return ctx.badRequest('This email is already subscribed.');
+                }
+
+                strapi.log.error('Error saving submission:', error);
+                return ctx.internalServerError('Internal server error');
+            }
 
         } catch (error) {
+
             strapi.log.error('reCAPTCHA verification error:', error);
             return ctx.internalServerError('Error verifying reCAPTCHA');
         }

@@ -569,7 +569,7 @@ export interface ApiMailingListSubmissionMailingListSubmission
     email: Schema.Attribute.Email &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
-    firstName: Schema.Attribute.String & Schema.Attribute.Required;
+    firstName: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -577,7 +577,7 @@ export interface ApiMailingListSubmissionMailingListSubmission
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    surname: Schema.Attribute.String & Schema.Attribute.Required;
+    surname: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

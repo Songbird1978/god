@@ -13,12 +13,11 @@
   "attributes": {
     "firstName": {
       "type": "string",
-      "required": true,
-      "unique": false
+      "required": false
     },
     "surname": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "email": {
       "type": "email",
