@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_content_biographies",
+  "info": {
+    "displayName": "biography",
+    "icon": "layer",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    }
+  }
+}

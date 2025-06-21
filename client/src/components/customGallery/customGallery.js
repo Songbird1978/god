@@ -9,7 +9,7 @@ const CustomGallery = ({ images }) => {
 
 
     return (
-        <div className="galleryContainer" >
+        <div className="galleryContainer" id="gallery">
             {images.length > 0 ? (
                 <ImageGallery
 

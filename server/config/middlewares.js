@@ -5,7 +5,7 @@ module.exports = [
   {
     name: "strapi::cors",
     config: {
-      origin: ["http://localhost:3000", "https://god-sage.vercel.app"], // Allow both local dev and Vercel
+      origin: ["http://localhost:3000"], // Allow both local dev and Vercel  "https://god-sage.vercel.app"
       methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
       headers: ["Content-Type", "Authorization"],
       credentials: true, // Allow cookies and authentication headers

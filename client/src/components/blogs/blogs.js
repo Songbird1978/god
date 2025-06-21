@@ -2,7 +2,6 @@ import React from "react";
 import "./blogs.css";
 import BlogModal from '../blogs/blogModal.js';
 import { useState } from 'react';
-import Contact from '../contact/contact.js';
 import '../../index.css';
 
 // Record Component (Reusable)
@@ -105,7 +104,6 @@ const Blogs = ({ blogs = [] }) => {
                         <BlogModal blog={selectedBlog} handleModalClose={handleModalClose} />
                     </div>
                 )}
-                <Contact />
             </div >
         </>
     );

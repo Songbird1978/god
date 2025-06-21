@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "biographies",
+  "info": {
+    "singularName": "biography",
+    "pluralName": "biographies",
+    "displayName": "biography",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "paragraph": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.biography"
+    }
+  }
+}

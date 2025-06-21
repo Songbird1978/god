@@ -3,7 +3,7 @@ import React from "react";
 import '../album/album.css';
 import '../../index.css';
 
-function Album() {
+function Album(hero) {
     return (
 
         <div className="album-container-grid" >
@@ -15,11 +15,13 @@ function Album() {
             <div className='buttonsArea'>
                 <div className="albumListdiv, actionTitle" id="albumStatement">
                     NEW ALBUM AVAILABLE NOW</div >
-                <a href="https://garyodonnellthedimestoreheroes.bandcamp.com/album/three-ways-from-nowhere" className="albumListdiv">
+                <a href="https://garyodonnellthedimestoreheroes.bandcamp.com/album/three-ways-from-nowhere" target="_blank"
+                    rel="noopener noreferrer" className="albumListdiv">
                     <div className="button">BUY </div>
                 </a>
                 <div className="albumListdiv">
-                    <div onClick={() => window.location.replace("/#listen")} className="button" style={{ scrollBehaviour: "smooth" }}>LISTEN</div>
+                    <div onClick={() => window.location.replace("/#listen")}
+                        className="button" style={{ scrollBehaviour: "smooth" }}>LISTEN</div>
                 </div>
             </div>
         </div>

@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { SpotifyLogo } from "@phosphor-icons/react";
 import { FacebookLogo } from "@phosphor-icons/react";
 import { EnvelopeSimple } from "@phosphor-icons/react";
 import { YoutubeLogo } from "@phosphor-icons/react";
-//import { SoundcloudLogo } from "@phosphor-icons/react";
+import { LinktreeLogo } from "@phosphor-icons/react";
 import { Parallelogram } from "@phosphor-icons/react";
 import { InstagramLogo } from '@phosphor-icons/react';
 import '../footer/footer.css';
@@ -21,7 +22,7 @@ function Contact() {
                     </a>
                 </li>
                 <li className="contactListItem">
-                    <a href="@">
+                    <a href="https://www.instagram.com/gary_odanddsh?igsh=a2ZxZ3BveHpkZDk=">
                         <InstagramLogo className="icon" weight="bold" />
                     </a>
                 </li>
@@ -40,20 +41,20 @@ function Contact() {
                         <Parallelogram className="icon" weight="bold" />
                     </a>
                 </li>
-                {/*
+
                 <li className="contactListItem">
-                    <a href="@">
-                        <SoundcloudLogo className="icon" weight="bold" />
+                    <a href="https://linktr.ee/Gary_O_Donnell">
+                        <LinktreeLogo className="icon" weight="bold" />
                     </a>
-                </li>*/}
+                </li>
                 <li className="contactListItem">
-                    <a href="mailto:">
+                    <Link to="/Message">
                         <EnvelopeSimple className="icon" weight="bold" />
-                    </a>
+                    </Link>
                 </li>
             </ul>
 
-        </div>
+        </div >
     )
 }
 

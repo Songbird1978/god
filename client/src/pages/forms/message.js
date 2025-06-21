@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
 import './mail.css';
@@ -8,6 +9,7 @@ import GoToTop from '../../goToTop.js';
 
 
 export const Message = () => {
+    const [recaptchaToken, setRecaptchaToken] = useState(null);
 
 
     const schema = yup.object().shape({
@@ -20,12 +22,40 @@ export const Message = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm({
         resolver: yupResolver(schema),
     });
+    const onSubmit = async (data) => {
+        if (!recaptchaToken) {
+            alert("Please complete the CAPTCHA");
+            return;
+        }
 
-    const onSubmit = (data) => {
+        try {
+            const response = await fetch('http://localhost:1337/api/message-submissions', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    data: {
+                        ...data,
+                        recaptchaToken
+                    }
+                }),
+            });
 
-        console.log(data);
-    }
+            if (!response.ok) throw new Error("Submission failed");
 
+            const result = await response.json();
+            console.log("Successfully submitted!", result);
+            alert("Email sent!");
+        } catch (error) {
+            console.error("Error submitting email:", error);
+            alert("Error sending your email.");
+        }
+    };
+
+    const handleCaptchaChange = (token) => {
+        setRecaptchaToken(token);
+    };
 
     return (
 
@@ -44,6 +74,13 @@ export const Message = () => {
                     <label htmlFor="message" >Message:</label><br></br>
                     <textarea {...register("message")} type="messsage" id="message" placeholder="Type your message here..." rows="6" maxLength="3000"></textarea><br></br><br></br>
                     <p>{errors.email?.message}</p>
+
+
+                    <ReCAPTCHA
+                        sitekey="6LeVK2grAAAAADLvjZlJpuEKJJG627TzKk5dpgOc"
+                        onChange={handleCaptchaChange}
+                    /><br />
+
                     <input type="submit" name="Submit" ></input><br></br><br></br>
                 </form>
             </div>

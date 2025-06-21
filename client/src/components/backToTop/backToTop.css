@@ -1,0 +1,15 @@
+.backToTopDiv {
+    position: fixed;
+    float: right;
+    z-index: 2000;
+    margin-top: 85vh;
+    margin-left: 80vw;
+    pointer-events: fill;
+    cursor: pointer;
+
+}
+
+.topIcon {
+    color: antiquewhite;
+    opacity: 50%;
+}

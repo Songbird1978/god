@@ -6,7 +6,8 @@ import Listen from '../../components/listen/listen';
 import Biography from '../biography/biography';
 import InformationBar from '../../components/informationBar/informationBar';
 import Blogs from '../../components/blogs/blogs.js';
-import Subscribe from './subscribe';
+import Subscribe from './subscribe.jsx';
+import Tour from '../tour/tour.js';
 
 
 function Home() {
@@ -14,6 +15,10 @@ function Home() {
     const [blogs, setBlogs] = useState([]);
     const [formattedGallery, setGallery] = useState([]);
     const [formattedBlogImages, setBlogImages] = useState([]);
+    const [hero, setHero] = useState([]);
+    const [bio, setBio] = useState([]);
+    const [contact, setContact] = useState([]);
+    const [links, setLinks] = useState([]);
 
     // 1. Define the filterDuplicates function inside the Home component
     function filterDuplicates(images) {
@@ -39,19 +44,39 @@ function Home() {
             try {
 
                 const API_URL = process.env.REACT_APP_API_URL;
+
+                // fetch bio data
+                const bioResponse = await fetch(`${API_URL}/api/biographies?populate=*`);
+                const bioData = await bioResponse.json();
+                const paragraphs = bioData.data[0]?.paragraph || [];
+                setBio(paragraphs);
+                console.log("bio formatted:", paragraphs);
+
+                //fetch contact data - emails
+                const contactResponse = await fetch(`${API_URL}/api/contacts?populate=*`);
+                const contactData = await contactResponse.json();
+                setContact(contactData.data || []);
+                console.log("contact:", contactData);
+
+                // fetch links 
+                const linkResponse = await fetch(`${API_URL}/api/links?populate=*`);
+                const linkData = await linkResponse.json();
+                setLinks(linkData.data || []);
+
                 // fetch blogs 
                 const blogResponse = await fetch(`${API_URL}/api/blogs?populate=*`);
-
                 const blogData = await blogResponse.json();
                 setBlogs(blogData.data || []);
-
-                //check raw blog data
 
                 // fetch Gallery
                 const galleryResponse = await fetch(`${API_URL}/api/galleries?populate=*`);
                 const galleryData = await galleryResponse.json();
 
-                //check raw gallery data
+                // fetch hero image
+                const heroResponse = await fetch(`${API_URL}/api/heroes?populate=*`);
+                const heroData = await heroResponse.json();
+                setHero(heroData.data || []);
+                console.log("hero:", heroData);
 
                 // process blog images
                 const formattedBlogImages = blogData.data.flatMap(blogItem => {
@@ -103,17 +128,20 @@ function Home() {
         };
 
         fetchData();
-    }, []);
+    }, []
+
+    );
 
     return (
         <>
             <div className="homeOrder">
-                <Album id="albumId" />
-                <Biography blogs={blogs} formattedGallery={formattedGallery} />
+                <Album id="albumId" hero={hero} />
+                <Biography blogs={blogs} formattedGallery={formattedGallery} bio={bio} />
                 <InformationBar blogs={blogs} />
                 <Blogs blogs={blogs} formattedBlogImages={formattedBlogImages} />
                 <Listen id="listenId" />
-                <Subscribe />
+                <Tour id="tour" />
+                <Subscribe id="contact" contact={contact} links={links} />
             </div>
         </>
     )

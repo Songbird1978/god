@@ -117,8 +117,8 @@ function Navbar() {
         anchor="left"
         open={open}
       >
-        <DrawerHeader>
-          <IconButton onClick={handleDrawerClose} style={{ Color: 'grey' }}>
+        <DrawerHeader >
+          <IconButton onClick={handleDrawerClose} style={{ Color: 'grey', justifyContent: "center" }}>
             {theme.direction === 'ltr' ? <CloseIcon className="icon" sx={{ marginTop: "20px" }} /> : <ChevronRightIcon className="icon" />}
           </IconButton>
         </DrawerHeader>
@@ -126,49 +126,96 @@ function Navbar() {
           handleDrawerClose();  // Call the function
           window.location.replace("/#album");  // Perform the redirect
         }}
-          style={{ fontSize: "10px", textDecoration: 'none', cursor: 'pointer', color: 'white' }}
+          style={{ fontSize: "10px", textDecoration: 'none', cursor: 'pointer' }}
           id="drawerLogo"></Logo>
         {/* this is where the menus start */}
-        <List className='nav' style={{ backgroundColor: 'transparent', opacity: '80%' }}>
-          <ListItem>
+        <List className='nav' style={{ backgroundColor: 'transparent', opacity: '80%', justifyContent: "center" }}>
+          <ListItem className="listItem">
             <div
+              className="listItem"
               onClick={() => {
                 handleDrawerClose();  // Call the function
                 window.location.replace("/#about");  // Perform the redirect
               }}
-              style={{ textDecoration: 'none', cursor: 'pointer', color: 'white' }}
+              style={{ textDecoration: 'none', cursor: 'pointer' }}
             >
               ABOUT
             </div>
 
           </ListItem>
           <Divider />
-          <ListItem>
+          <ListItem className="listItem">
             <div
+              className="listItem"
               onClick={() => {
                 handleDrawerClose();  // Call the function
                 window.location.replace("/#blogs");  // Perform the redirect
               }}
-              style={{ textDecoration: 'none', cursor: 'pointer', color: 'white' }}
+              style={{ textDecoration: 'none', cursor: 'pointer' }}
             >
               BLOGS
             </div>
           </ListItem>
           <Divider />
-          <ListItem>
+          <ListItem className="listItem">
             <div
+              className="listItem"
+              onClick={() => {
+                handleDrawerClose();  // Call the function
+                window.location.replace("/#tour");  // Perform the redirect
+              }}
+              style={{ textDecoration: 'none', cursor: 'pointer' }}
+            >
+              TOUR
+            </div>
+          </ListItem>
+          <Divider />
+          <ListItem className="listItem">
+            <div
+              className="listItem"
               onClick={() => {
                 handleDrawerClose();  // Call the function
                 window.location.replace("/#listen");  // Perform the redirect
               }}
-              style={{ textDecoration: 'none', cursor: 'pointer', color: 'white' }}
+              style={{ textDecoration: 'none', cursor: 'pointer' }}
             >
               LISTEN
             </div>
           </ListItem>
           <Divider />
           <ListItem>
-            <Link to="https://garyodonnellthedimestoreheroes.bandcamp.com/album/three-ways-from-nowhere" style={{ textDecoration: 'none', color: 'white' }} onClick={handleDrawerClose}>STORE</Link>
+            <Link
+              className="listItem"
+              to="https://garyodonnellthedimestoreheroes.bandcamp.com/album/three-ways-from-nowhere" target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: 'none', color: 'white' }}
+              onClick={handleDrawerClose}>STORE</Link>
+          </ListItem>
+          <Divider />
+          <ListItem>
+            <div
+              className="listItem"
+              onClick={() => {
+                handleDrawerClose();  // Call the function
+                window.location.replace("/#contact");  // Perform the redirect
+              }}
+              style={{ textDecoration: 'none', cursor: 'pointer' }}
+            >
+              CONTACT
+            </div>
+          </ListItem>
+          <Divider />
+          <ListItem>
+            <div
+              className="listItem"
+              onClick={() => {
+                handleDrawerClose();  // Call the function
+                window.location.replace("/#gallery");  // Perform the redirect
+              }}
+              style={{ textDecoration: 'none', cursor: 'pointer' }}
+            >
+              GALLERY
+            </div>
           </ListItem>
           <Divider />
 
