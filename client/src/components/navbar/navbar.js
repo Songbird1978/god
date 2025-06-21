@@ -130,7 +130,7 @@ function Navbar() {
           style={{ fontSize: "10px", textDecoration: 'none', cursor: 'pointer' }}
           id="drawerLogo"></Logo>
         {/* this is where the menus start */}
-        <List className='nav' style={{ backgroundColor: 'transparent', opacity: '80%', justifyContent: "center", color: "#faebd7"; }}>
+        <List className='nav' style={{ backgroundColor: 'transparent', opacity: '80%', justifyContent: "center", color: "#faebd7" }}>
           <ListItem className="listItem">
             <div
               className="listItem"
