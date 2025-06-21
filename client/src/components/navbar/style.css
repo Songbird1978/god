@@ -13,11 +13,11 @@
     justify-content: center;
 }
 
-.css-1p823my-MuiListItem-root {
+.css-1p823my-MuiListItem-root .listItem {
     display: flex;
     justify-content: center !important;
     text-align: center !important;
-    color: antiquewhite;
+    color: antiquewhite !important;
 }
 
 .nav {
@@ -94,6 +94,8 @@
     text-decoration: underline;
     color: hsl(0, 11%, 70%);
 }
+
+
 
 @media (max-width: 770px) {
 
