@@ -39,12 +39,22 @@ th {
     width: 100%;
     color: antiquewhite;
     padding: 30px;
+    font-size: 2.5vw;
 
 }
 
-.linkBtn a {
-    text-decoration: none;
-    color: peru;
-    margin-bottom: 5px;
 
+
+.tourBtn {
+    width: 80px !important;
+    height: 20px;
+    border-radius: 25px;
+    border: 3px solid peru;
+    text-align: center;
+    cursor: pointer;
+}
+
+a {
+    color: peru;
+    text-decoration: none;
 }

@@ -16,10 +16,13 @@
 
 }
 
+.reCaptcha {
+    max-width: 200px !important;
+}
+
 .formElements {
     color: #776c6c;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
 }
 
 .formValue {

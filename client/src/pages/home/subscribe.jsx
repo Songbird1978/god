@@ -84,19 +84,20 @@ const Subscribe = () => {
             </IconButton>
             <Typography variant="h3">Subscribe to my Newsletter</Typography>
             <Box
-                p="2px 4px"
+                p="4px"
                 m="15px auto"
                 display="flex"
+                flexDirection="column"
                 alignItems="center"
                 justifyContent="center"
-                width="75%"
+                width="100%"
                 flexWrap="wrap"
                 backgroundColor="black"
                 color="antiquewhite"
             >
                 <InputBase
                     sx={{
-                        ml: 1,
+                        m: 1,
                         flex: 1,
                         backgroundColor: "antiquewhite",
                         fontFamily: "courier",
@@ -108,21 +109,24 @@ const Subscribe = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     value={email}
                 />
+
+                <Box m="15px" p="4px" display="flex" justifyContent="center" align-items="center" object-fit="contain" >
+                    <ReCAPTCHA
+                        className="reCaptcha"
+                        sitekey="6LeVK2grAAAAADLvjZlJpuEKJJG627TzKk5dpgOc"
+                        onChange={handleCaptchaChange}
+                        size="compact"
+                    />
+                </Box>
                 <Typography
                     sx={{
                         p: "10px",
-                        ":hover": { cursor: "pointer", color: "lightgray" }
+                        ":hover": { cursor: "pointer", color: "peru" }
                     }}
                     onClick={handleSubscribe}
                 >
                     {loading ? "Submitting..." : "Subscribe"}
                 </Typography>
-                <Box mt={2} width="100%" display="flex" justifyContent="center">
-                    <ReCAPTCHA
-                        sitekey="6LeVK2grAAAAADLvjZlJpuEKJJG627TzKk5dpgOc"
-                        onChange={handleCaptchaChange}
-                    />
-                </Box>
             </Box>
         </Box>
     );

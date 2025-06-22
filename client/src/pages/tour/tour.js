@@ -98,7 +98,7 @@ function Tour() {
                                     <th className="country">{show.country}</th>
                                     <th className="venue">{show.venue}</th>
                                     <th className="date">{show.date}</th>
-                                    <th className="link"><button className="linkBtn button"><a href={show.link}>Tickets</a></button></th>
+                                    <th className="link"><button className="tourBtn linkBtn"><a href={show.link}>Tickets</a></button></th>
                                 </tr>
 
                             );
