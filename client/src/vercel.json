@@ -8,6 +8,15 @@
                     "value": "max-age=63072000; includeSubDomains; preload"
                 }
             ]
+        },
+        {
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "Content-Security-Policy",
+                    "value": "default-src 'self'; script-src 'self' 'unsafe-inline' vercel.live *.cloudinary.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: blob: *.cloudinary.com; connect-src 'self' https://god-6usq.onrender.com https://api.cloudinary.com https://www.garyodandthedsh.com; frame-ancestors 'none';"
+                }
+            ]
         }
     ]
 }
