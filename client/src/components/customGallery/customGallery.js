@@ -5,7 +5,7 @@ import './customGallery.css';
 
 const CustomGallery = ({ images }) => {
 
-    console.log("Images from Home:", images);
+    //console.log("Images from Home:", images);
 
 
     return (

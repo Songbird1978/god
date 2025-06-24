@@ -86,7 +86,7 @@ const Blogs = ({ blogs = [] }) => {
                                         <div groovecount="0" className="flip-card-back">
                                             <h2 className="flip-card-back-title blogTitle">{blog.Name}</h2>
                                             <p>{blog.shortDescription}</p>
-                                            <button onClick={() => openModal(blog) & console.log("openModalClicked:", true)} className="read-more">Read More</button>
+                                            <button onClick={() => openModal(blog)} className="read-more">Read More</button>
                                         </div>
                                     </div>
                                 </div>

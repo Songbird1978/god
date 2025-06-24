@@ -50,13 +50,13 @@ function Home() {
                 const bioData = await bioResponse.json();
                 const paragraphs = bioData.data[0]?.paragraph || [];
                 setBio(paragraphs);
-                console.log("bio formatted:", paragraphs);
+                // console.log("bio formatted:", paragraphs);
 
                 //fetch contact data - emails
                 const contactResponse = await fetch(`${API_URL}/api/contacts?populate=*`);
                 const contactData = await contactResponse.json();
                 setContact(contactData.data || []);
-                console.log("contact:", contactData);
+                // console.log("contact:", contactData);
 
                 // fetch links 
                 const linkResponse = await fetch(`${API_URL}/api/links?populate=*`);
@@ -76,7 +76,7 @@ function Home() {
                 const heroResponse = await fetch(`${API_URL}/api/heroes?populate=*`);
                 const heroData = await heroResponse.json();
                 setHero(heroData.data || []);
-                console.log("hero:", heroData);
+                // console.log("hero:", heroData);
 
                 // process blog images
                 const formattedBlogImages = blogData.data.flatMap(blogItem => {
@@ -86,7 +86,7 @@ function Home() {
                     return blogItem.images.map(image => {
                         // log the image object before using it 
 
-                        console.log("formattedBlogImages:", image);
+                        //console.log("formattedBlogImages:", image);
 
                         return {
                             original: `${image.url}`, // directly access

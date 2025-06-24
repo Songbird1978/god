@@ -9,7 +9,7 @@ import InformationBar from '../../components/informationBar/informationBar.js';
 function Biography({ blogs = [], formattedGallery = [], bio = [] }) {
     // process images safely
 
-    console.log("formattedGallery from home:", formattedGallery);
+    //console.log("formattedGallery from home:", formattedGallery);
     return (
 
         <>

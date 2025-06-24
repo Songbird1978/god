@@ -33,7 +33,6 @@ function Tour() {
                 const tourInfoData = await tourInfoResponse.json();
                 setTourInfo(tourInfoData.data || []);
 
-                console.log(tourInfoData.data);
             } catch (error) {
                 console.error("error fetching tourInfo", error);
             }
@@ -77,7 +76,7 @@ function Tour() {
                             x: { duration: 10, ease: "linear" }
                         }}
                         onAnimationComplete={() => {
-                            console.log("Animation done. Turning bus.");
+                            //console.log("Animation done. Turning bus.");
                             setDirection((prev) => (prev === "right" ? "left" : "right"));
                             setMoveKey(prev => prev + 1); // re-triggers motion.img
                         }}
