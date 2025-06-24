@@ -21,6 +21,9 @@ function Footer() {
                         <div className="button">MAILING LIST</div>
                     </Link>
                 </div>
+                <div className="columnOneContact">
+                    <Contact className="columnOneContact" />
+                </div>
                 <p> © 2024 Gary O'Donnell. <br></br>All rights reserved.<br></br>
                     Site made with <span><HeartStraight size={15} weight="bold" color="red" /></span> by
                     <a href="https://www.thesongbird.co.uk"
@@ -33,9 +36,7 @@ function Footer() {
                     > The Songbird
                     </a>
                 </p>
-                <div className="columnOneContact">
-                    <Contact className="columnOneContact" />
-                </div>
+
             </footer>
         </>
     )
