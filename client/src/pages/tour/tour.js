@@ -105,7 +105,7 @@ function Tour() {
                         })
                     ) : (
                         <tr>
-                            <th className="notTouring">We're not touring at the moment. Sign up to the mailing list or follow me on Social Media to hear about any shows we have coming up. </th>
+                            <th className="notTouring">We're not touring at the moment. <br></br><br></br>Sign up to the mailing list or follow me on Social Media to hear about any shows we have coming up. </th>
                         </tr>
                     )}
                 </tbody>
