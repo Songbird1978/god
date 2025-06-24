@@ -78,14 +78,14 @@ const Subscribe = () => {
     };
 
     return (
-        <Box width="80%" margin="80px auto" textAlign="center" backgroundColor="black" color="antiquewhite">
+        <Box width="90%" margin="auto" textAlign="center" backgroundColor="black" color="antiquewhite">
             <IconButton>
                 <MarkEmailReadOutlinedIcon fontSize="large" style={{ color: "antiquewhite" }} />
             </IconButton>
             <Typography variant="h3">Subscribe to my Newsletter</Typography>
             <Box
                 p="4px"
-                m="15px auto"
+                m="auto"
                 display="flex"
                 flexDirection="column"
                 alignItems="center"
@@ -101,7 +101,7 @@ const Subscribe = () => {
                         flex: 1,
                         backgroundColor: "antiquewhite",
                         fontFamily: "courier",
-                        padding: "6px 12px",
+                        padding: "12px",
                         borderRadius: "4px"
                     }}
                     placeholder="Enter email"
@@ -118,15 +118,17 @@ const Subscribe = () => {
                         size="compact"
                     />
                 </Box>
-                <Typography
-                    sx={{
-                        p: "10px",
-                        ":hover": { cursor: "pointer", color: "peru" }
-                    }}
-                    onClick={handleSubscribe}
-                >
-                    {loading ? "Submitting..." : "Subscribe"}
-                </Typography>
+                <button className="button linkBtn" style={{ color: "peru" }}>
+                    <Typography
+                        sx={{
+                            p: "10px",
+                            ":hover": { cursor: "pointer", color: "peru" }
+                        }}
+                        onClick={handleSubscribe}
+                    >
+                        {loading ? "Submitting..." : "Subscribe"}
+                    </Typography>
+                </button>
             </Box>
         </Box>
     );
