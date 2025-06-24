@@ -78,7 +78,7 @@ const Subscribe = () => {
     };
 
     return (
-        <Box width="90%" margin="auto" textAlign="center" backgroundColor="black" color="antiquewhite">
+        <Box width="90%" height="100vh" margin="auto" textAlign="center" backgroundColor="black" color="antiquewhite">
             <IconButton>
                 <MarkEmailReadOutlinedIcon fontSize="large" style={{ color: "antiquewhite" }} />
             </IconButton>
