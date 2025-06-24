@@ -10,9 +10,7 @@ function Footer() {
     return (
         <>
             <footer className="footerContainer" id="contact">
-                <div className="columnOneContact">
-                    <Contact className="columnOneContact" />
-                </div>
+
                 <div className="columnOne">
                     <Link to="./message" style={{ textDecoration: "none", color: "grey" }}>
                         <div className="button">CONTACT</div>
@@ -35,6 +33,9 @@ function Footer() {
                     > The Songbird
                     </a>
                 </p>
+                <div className="columnOneContact">
+                    <Contact className="columnOneContact" />
+                </div>
             </footer>
         </>
     )
