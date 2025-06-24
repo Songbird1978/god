@@ -58,3 +58,8 @@ a {
     color: peru;
     text-decoration: none;
 }
+
+.notTouring {
+    font-size: 2.5vw;
+    font-family: Flood;
+}
