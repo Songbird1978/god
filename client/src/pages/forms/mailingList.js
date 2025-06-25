@@ -85,7 +85,6 @@ export const MailingList = () => {
                         sitekey="6LeVK2grAAAAADLvjZlJpuEKJJG627TzKk5dpgOc"
                         onChange={handleCaptchaChange}
                         size="compact"
-                        style={{ alignSelf: "center" }}
                     /><br />
 
                     <input type="submit" className="submit" name="submit" /><br /><br />
