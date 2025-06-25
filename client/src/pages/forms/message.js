@@ -29,7 +29,10 @@ export const Message = () => {
         }
 
         try {
-            const response = await fetch('http://localhost:1337/api/message-submissions', {
+
+            const API_URL = process.env.REACT_APP_API_URL;
+
+            const response = await fetch(`${API_URL}/api/message-submissions`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
