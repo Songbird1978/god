@@ -5,7 +5,7 @@ import './informationBar.css';
 const InformationBar = ({ blogs = [] }) => {
     return (
 
-        <div className="tickerContainer">
+        <div className="tickerContainer" id="blogsTicker">
             <div className="tickerWrapper">
                 <div className="tickerContent">
                     {Array.isArray(blogs) && blogs.length > 0 ? (

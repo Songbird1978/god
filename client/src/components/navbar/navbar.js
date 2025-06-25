@@ -150,7 +150,7 @@ function Navbar() {
               className="listItem"
               onClick={() => {
                 handleDrawerClose();  // Call the function
-                window.location.replace("/#blogs");  // Perform the redirect
+                window.location.replace("/#blogsTicker");  // Perform the redirect
               }}
               style={{ textDecoration: 'none', cursor: 'pointer', color: "#faebd7" }}
             >

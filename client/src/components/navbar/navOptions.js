@@ -21,7 +21,7 @@ function NavOptions(handleDrawerClose) {
                 <li  >
                     <div onClick={() => {
                         // Call the function
-                        window.location.replace("/#blogs");  // Perform the redirect
+                        window.location.replace("/#blogsTicker");  // Perform the redirect
                     }} className="columnOneNav navOption" style={{ textDecoration: 'none', cursor: "pointer" }}  >BLOG</div>
                 </li>
                 <li  >
