@@ -1,32 +1,16 @@
-module.exports = [
-  'strapi::logger',
-  'strapi::errors',
-  'strapi::security',
-  {
-    name: "strapi::cors",
-    config: {
+module.exports = {
+  settings: {
+    cors: {
+      enabled: true,
       origin: [
-        "http://localhost:3000",
-        "https://garyodandthedsh.com",
-        "https://www.garyodandthedsh.com",
-        "https://god-sage.vercel.app"
+        'http://localhost:3000',
+        'https://god-sage.vercel.app',
+        'https://garyodandthedsh.com',
+        'https://www.garyodandthedsh.com'
       ],
-      methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-      headers: [
-        "Content-Type",
-        "Authorization",
-        "Origin",
-        "Accept",
-        "X-Requested-With"
-      ],
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
       credentials: true,
     },
   },
-
-  'strapi::poweredBy',
-  'strapi::query',
-  'strapi::body',
-  'strapi::session',
-  'strapi::favicon',
-  'strapi::public',
-];
+};
