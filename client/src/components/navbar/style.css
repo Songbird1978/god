@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 10vh !important;
+    min-height: 8vh !important;
     position: fixed;
     top: 0px;
     background-color: black;
