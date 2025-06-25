@@ -5,9 +5,14 @@ import * as yup from 'yup';
 import './mail.css';
 import { yupResolver } from '@hookform/resolvers/yup';
 import GoToTop from '../../goToTop.js';
+import { useEffect } from 'react';
 
 export const MailingList = () => {
     const [recaptchaToken, setRecaptchaToken] = useState(null);
+
+    useEffect(() => {
+        console.log("🌐 Current domain:", window.location.hostname);
+    }, []);
 
     const schema = yup.object().shape({
         firstName: yup.string().required("Your First Name is Required"),
