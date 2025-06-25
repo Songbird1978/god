@@ -51,3 +51,7 @@ input[type=submit] {
     z-index: 1000;
 
 }
+
+.reCaptcha {
+    align-self: center;
+}
