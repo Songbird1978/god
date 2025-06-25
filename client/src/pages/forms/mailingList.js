@@ -76,8 +76,10 @@ export const MailingList = () => {
 
 
                     <ReCAPTCHA
+                        className="reCaptcha"
                         sitekey="6LeVK2grAAAAADLvjZlJpuEKJJG627TzKk5dpgOc"
                         onChange={handleCaptchaChange}
+                        size="compact"
                     /><br />
 
                     <input type="submit" className="submit" name="submit" /><br /><br />

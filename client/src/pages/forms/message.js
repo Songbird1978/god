@@ -77,8 +77,10 @@ export const Message = () => {
 
 
                     <ReCAPTCHA
+                        className="reCaptcha"
                         sitekey="6LeVK2grAAAAADLvjZlJpuEKJJG627TzKk5dpgOc"
                         onChange={handleCaptchaChange}
+                        size="compact"
                     /><br />
 
                     <input type="submit" name="Submit" ></input><br></br><br></br>
