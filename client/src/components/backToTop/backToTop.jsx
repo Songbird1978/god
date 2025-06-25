@@ -9,7 +9,7 @@ function BackToTop() {
     return (
 
         <motion.div className="backToTopDiv"
-            onClick={() => window.location.replace("/#album")}
+            onClick={() => window.location.replace("/")}
             style={{ scrollBehaviour: "smooth" }}
             whileHover={{ scale: 1.5 }}
             whileTap={{ scale: 0.5 }}
