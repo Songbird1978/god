@@ -36,7 +36,7 @@ module.exports = createCoreController('api::mailing-list-submission.mailing-list
             const json = await response.json();
             console.log('reCAPTCHA response:', json);
 
-            if (!json.success || (json.score && json.score < 0.5)) {
+            if (!json.success) {
                 return ctx.badRequest('Failed reCAPTCHA verification');
             }
 

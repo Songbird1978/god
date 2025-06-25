@@ -11,7 +11,7 @@ export const MailingList = () => {
     const [recaptchaToken, setRecaptchaToken] = useState(null);
 
     useEffect(() => {
-        console.log("🌐 Current domain:", window.location.hostname);
+        console.log("Current domain:", window.location.hostname);
     }, []);
 
     const schema = yup.object().shape({
