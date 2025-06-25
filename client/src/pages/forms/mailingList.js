@@ -27,7 +27,8 @@ export const MailingList = () => {
 
         try {
 
-            const API_URL = process.env.REACT_APP_API_URL;
+            const API_URL = 'https://god-6usq.onrender.com';
+
 
             console.log("API_URL is:", API_URL);
 
