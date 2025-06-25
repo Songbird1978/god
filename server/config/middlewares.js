@@ -5,22 +5,12 @@ module.exports = [
   {
     name: "strapi::cors",
     config: {
-      /**
-       * Dynamically allow requests from specific origins
-       */
-      origin: (origin, ctx) => {
-        const allowedOrigins = [
-          "http://localhost:3000",
-          "https://garyodandthedsh.com",
-          "https://www.garyodandthedsh.com"
-        ];
-
-        const vercelPattern = /^https:\/\/.*\.vercel\.app$/;
-
-        return (
-          allowedOrigins.includes(origin) || vercelPattern.test(origin)
-        );
-      },
+      origin: [
+        "http://localhost:3000",
+        "https://garyodandthedsh.com",
+        "https://www.garyodandthedsh.com",
+        "https://god-sage.vercel.app"
+      ],
       methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
       headers: [
         "Content-Type",
