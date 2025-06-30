@@ -45,8 +45,6 @@ th {
 
 }
 
-
-
 .tourBtn {
     width: 80px !important;
     height: 20px;
@@ -63,5 +61,8 @@ a {
 
 .notTouring {
     font-size: 2.5vw;
-    font-family: Flood;
+    font-family: 'Courier New', Courier, monospace;
+    text-justify: center;
+    justify-content: center;
+    text-align: center;
 }
