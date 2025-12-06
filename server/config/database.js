@@ -30,7 +30,7 @@ module.exports = ({ env }) => {
                 filename: path.join(
                     __dirname,
                     "..",
-                    env("DATABASE_FILENAME", "/var/data/data.db")
+                    env("DATABASE_FILENAME", "/data/data.db") //for render or for local .tmp/data.db
                 ),
             },
             useNullAsDefault: true,
