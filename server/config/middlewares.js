@@ -7,6 +7,7 @@ module.exports = [
       enabled: true,
       origin: [
         'http://localhost:3000',
+        'https://god-6usq.onrender.com',  // ADD THIS LINE
         'https://god-sage.vercel.app',
         'https://garyodandthedsh.com',
         'https://www.garyodandthedsh.com'
