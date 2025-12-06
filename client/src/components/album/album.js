@@ -19,9 +19,31 @@ function Album(hero) {
                     rel="noopener noreferrer" className="albumListdiv">
                     <div className="button">BUY </div>
                 </a>
-                <div className="albumListdiv">
+                <div className="albumListdiv" style={{ paddingBottom: '40px'}}>
                     <div onClick={() => window.location.replace("/#listen")}
                         className="button" style={{ scrollBehaviour: "smooth" }}>LISTEN</div>
+                </div>
+                <div style={{display: 'flex', width: '100vw', height: '80vh', backgroundColor: '#4A5375', padding: "20px", alignItems: 'center'}}>
+                    <img src="https://res.cloudinary.com/djtvlgplj/image/upload/v1765044989/gary_at_the_wedge_dad7c2de6e.jpg" alt="Gary at the Wedgewood Rooms" style={{width: '20rem', height: '20rem'}}/>
+                    <div style={{ display: "block", justifyContent: "center", padding: '20px'}}>
+                        <div className="albumListdiv, actionTitle" id="albumStatement" style={{}}>
+                        LIVE SHOWS COMING SOON...
+                        </div >
+                        <div>
+                        <a href="https://garyodonnellthedimestoreheroes.bandcamp.com/album/three-ways-from-nowhere" target="_blank"
+                        rel="noopener noreferrer" className="albumListdiv">
+                            <div className="button">
+                            TICKETS 
+                            </div>
+                        </a>
+                        <div className="albumListdiv">
+                            <div onClick={() => window.location.replace("/#tour")}
+                            className="button" style={{ scrollBehaviour: "smooth" }}>
+                            DATES
+                            </div>
+                    </div>
+                </div>
+            </div>
                 </div>
             </div>
         </div>

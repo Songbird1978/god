@@ -63,7 +63,7 @@
     height: 80vh;
     background-color: peru;
     color: hsl(0, 34%, 86%);
-    overflow-x: auto;
+    overflow-x: scroll;
     white-space: nowrap;
     direction: ltr;
     padding: 20px;

@@ -9,6 +9,7 @@
     font-size: 1rem;
     z-index: 2;
     margin-bottom: 50px;
+    scrollbar-color: none;
 }
 
 .biographyContent {
@@ -31,8 +32,10 @@
     width: 100%;
     height: 80vh;
     box-shadow: 2px 2px 2px 2px rgba(128, 114, 102, 0.787);
-    padding: 50px;
+    padding: 10%;
     overflow-y: scroll;
+    scrollbar-width: none;
+    
 }
 
 .heading {

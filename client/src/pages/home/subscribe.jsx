@@ -81,13 +81,13 @@ const Subscribe = () => {
     };
 
     return (
-        <Box width="90%" height="100vh" margin="auto" textAlign="center" backgroundColor="black" color="antiquewhite">
+        <Box width="100%" height="100vh"  marginTop="0" textAlign="center" backgroundColor='#CC6960' color="antiquewhite" padding="40px">
             <IconButton>
                 <MarkEmailReadOutlinedIcon fontSize="large" style={{ color: "antiquewhite" }} />
             </IconButton>
-            <Typography variant="h3">Subscribe to my Newsletter</Typography>
+            <Typography variant="h3" marginBottom="20px">Subscribe to my Newsletter</Typography>
             <Box
-                p="4px"
+                p="20px"
                 m="auto"
                 display="flex"
                 flexDirection="column"
@@ -95,7 +95,7 @@ const Subscribe = () => {
                 justifyContent="center"
                 width="100%"
                 flexWrap="wrap"
-                backgroundColor="black"
+                backgroundColor="#CC6960"
                 color="antiquewhite"
             >
                 <InputBase
@@ -113,7 +113,7 @@ const Subscribe = () => {
                     value={email}
                 />
 
-                <Box m="15px" p="4px" display="flex" justifyContent="center" align-items="center" object-fit="contain" >
+                <Box m="15px" p="4px" display="flex" justifyContent="center" align-items="center" object-fit="contain"  >
                     <ReCAPTCHA
                         className="reCaptcha"
                         sitekey="6LeVK2grAAAAADLvjZlJpuEKJJG627TzKk5dpgOc"
