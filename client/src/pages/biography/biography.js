@@ -30,7 +30,6 @@ function Biography({ blogs = [], formattedGallery = [], bio = [] }) {
                             {bio.map((p, index) => (
                                 <> 
                                 <SEO 
-                                key={`bio-${p.id}-${index}`}
                                     title="About"
                                     description={p.text}
                                     url="/biography"
