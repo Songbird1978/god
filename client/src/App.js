@@ -11,6 +11,7 @@ import MailingList from './pages/forms/mailingList';
 import Message from './pages/forms/message';
 import './index.css';
 import BackToTop from './components/backToTop/backToTop.jsx';
+import StructuredData from './components/structuredData.js';
 
 function App() {
   const location = useLocation();
@@ -20,6 +21,7 @@ function App() {
       <div className="App">
         <Navbar />
         <BackToTop />
+        <StructuredData />
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/discography" element={<Discography />} />
