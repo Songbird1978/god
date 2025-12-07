@@ -7,7 +7,7 @@ const StructuredData = () => {
     "name": "Gary O'Donnell and The Dime Store Heroes",
     "url": "https://garyodandthedsh.com",
     "genre": ["Country", "Rock", "Songwriter", "Country Rock"],
-    "description": "Folk rock band from Portsmouth",
+    "description": "Country rock band from Portsmouth",
     "foundingDate": "2020",
     "member": [
        {
