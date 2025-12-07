@@ -12,12 +12,12 @@ function Footer() {
             <footer className="footerContainer" id="contact">
 
                 <div className="columnOne">
-                    <Link to="./message" style={{ textDecoration: "none", color: "grey", ariaLabel:"link to send message" }}>
+                    <Link to="./message" style={{ textDecoration: "none", color: "antiqueWhite", ariaLabel:"link to send message" }}>
                         <div className="button">CONTACT</div>
                     </Link>
                 </div>
                 <div className="columnOne">
-                    <Link to="./mailingList" style={{ textDecoration: "none", color: "grey", ariaLabel:"link to join mailing list" }}>
+                    <Link to="./mailingList" style={{ textDecoration: "none", color: "antique-white", ariaLabel:"link to join mailing list" }}>
                         <div className="button">MAILING LIST</div>
                     </Link>
                 </div>
@@ -25,17 +25,23 @@ function Footer() {
                     <Contact className="columnOneContact" />
                 </div>
                 <p> © 2024 Gary O'Donnell. <br></br>All rights reserved.<br></br>
-                    Site made with <span><HeartStraight size={15} weight="bold" color="red" /></span> by
+                    Site made with <span><HeartStraight size={15} weight="bold" color="red" /> </span>by <span>
+                        <br></br> <br></br>
                     <a href="https://www.thesongbird.co.uk"
                         style={{
                             textDecoration: "none",
-                            color: "peru"
+                            color: "#4A5375",
+                            backgroundColor: 'antiquewhite',
+                            border: '2px solid peru',
+                            borderRadius: "15px",
+                            padding: '5px',
+                            marginLeft: '2px',
                         }}
                         target="_blank"
                         ariaLabel="External link to the Songbird's website - the developer who created this site"
                         rel="noopener noreferrer"
                     > The Songbird
-                    </a>
+                    </a></span>
                 </p>
 
             </footer>
