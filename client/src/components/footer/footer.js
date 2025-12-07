@@ -29,7 +29,7 @@ function Footer() {
                     <a href="https://www.thesongbird.co.uk"
                         style={{
                             textDecoration: "none",
-                            color: "antiqueWhite"
+                            color: "peru"
                         }}
                         target="_blank"
                         rel="noopener noreferrer"
