@@ -16,6 +16,7 @@ const CustomGallery = ({ images }) => {
                     height="80vh"
                     width="auto"
                     items={images}
+                    alt={images.alt}
                     showThumbnails={true}
                     showFullscreenButton={true}
                     autoPlay={false}

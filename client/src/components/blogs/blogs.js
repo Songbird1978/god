@@ -66,7 +66,7 @@ const Blogs = ({ blogs = [] }) => {
         <>
             <SEO 
                 title="Blog"
-                description="Latest news and updates from Gary O'D and The DSH"
+                description="Latest news and updates from Gary O'Donnell and The Dime Store Heroes"
                 url="/"
                 />
             <div className="blogs" id="blogs" >
@@ -93,7 +93,7 @@ const Blogs = ({ blogs = [] }) => {
                                     <div className="flip-card">
                                         {/* Front side - Record - Render Record with Blog's image and grooves*/}
                                         <div className="flip-card-front">
-                                            <Record imageUrl={imageUrl} />
+                                            <Record imageUrl={imageUrl} alt={blog.shortDescription} />
                                         </div>
                                         {/* Back side - blog Info */}
                                         <div groovecount="0" className="flip-card-back">

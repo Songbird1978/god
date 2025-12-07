@@ -113,6 +113,7 @@ function Home() {
                             original: imageUrl,
                             thumbnail: thumbnailUrl,
                             description: galleryItem.imageDescription || "No description available", // imagedescription field
+                            alt: galleryItem.imageDescription || "No description available"
                         };
                     });
                 });
@@ -136,8 +137,9 @@ function Home() {
     return (
         <>
           <SEO 
-        title="Home"
+        title="Gary O'Donnell & the Dime Store Heroes"
         description="Portsmouth-based rock band. Listen to our music and check tour dates."
+        url="/"
       />
             <div className="homeOrder">
                 <Album id="albumId" hero={hero} />
