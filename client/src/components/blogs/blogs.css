@@ -58,17 +58,30 @@
 }
 
 .blogContainer {
-    display: flex;
-    width: 100%;
-    height: 80vh;
+   
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-gap: 20px;
+    width: 100vw;
+    height: auto;
     background-color: peru;
     color: hsl(0, 34%, 86%);
-    overflow-x: scroll;
-    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: scroll;
+    white-space: wrap;
     direction: ltr;
     padding: 20px;
     scroll-behavior: smooth;
     gap: 20px;
+    justify-content: center;
+}
+
+@media (min-width: 800px) {
+    .blogContainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        grid-gap: 20px;
+    }
 }
 
 .blogContainer::-webkit-scrollbar {
@@ -78,15 +91,18 @@
 .blogItem {
     flex-shrink: 0;
     width: 350px;
-    display: inline-block;
+    display: flex;
+   
+    margin: 10px;
+    justify-self: center;
 }
 
 
 .flip-card-container {
 
-    width: 360px;
+    width: 350px;
     /* Match the record size */
-    height: 360px;
+    height: 350px;
     white-space: wrap;
 }
 

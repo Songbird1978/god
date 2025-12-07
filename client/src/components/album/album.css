@@ -7,7 +7,6 @@
     justify-content: center;
     align-items: center;
     margin-top: 50px;
-    margin-bottom: 50px;
     background-color: black;
 }
 
@@ -30,6 +29,7 @@
     background-blend-mode: multiply;
     background-color: grey;
     box-shadow: inset 0px 0px 30px 30px rgba(0, 0, 0, 0.9);
+    margin-bottom: 20px;
 
 }
 
@@ -67,10 +67,11 @@
     text-align: center;
     text-decoration: none;
     cursor: pointer;
+ 
 }
 
 .actionTitle {
-    font-size: 2em;
+    font-size: 2rem;
     color: antiquewhite;
     justify-content: center;
     align-items: center;
