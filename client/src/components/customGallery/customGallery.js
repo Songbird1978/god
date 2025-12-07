@@ -16,7 +16,7 @@ const CustomGallery = ({ images }) => {
                     height="80vh"
                     width="auto"
                     items={images}
-                    alt={images.alt}
+                    alt="Gary O'Donnell & the Dime Store Heroes"
                     showThumbnails={true}
                     showFullscreenButton={true}
                     autoPlay={false}
