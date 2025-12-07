@@ -8,7 +8,7 @@ import InformationBar from '../../components/informationBar/informationBar';
 import Blogs from '../../components/blogs/blogs.js';
 import Subscribe from './subscribe.jsx';
 import Tour from '../tour/tour.js';
-import SEO from './components/SEO';
+import SEO from '../../components/SEO';
 
 
 function Home() {
