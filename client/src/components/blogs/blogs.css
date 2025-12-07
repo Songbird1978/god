@@ -9,11 +9,22 @@
     font-family: BigShoulder;
     font-size: 50px;
     background-color: peru;
-    color: antiquewhite;
+    color:#AC5B7B;
     padding: 30px;
     text-align: justify;
     margin: 0;
 }
+
+/* other colour ideas from swatches 
+
+#CF8740
+#CC6960
+#AC5B7B
+#7B5883
+#4A5375
+#2F4858
+
+*/
 
 .blogAction {
     font-family: 'Courier New', Courier, monospace;

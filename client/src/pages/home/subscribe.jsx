@@ -1,4 +1,4 @@
-import { Box, InputBase, Typography, IconButton } from '@mui/material';
+import { Box, InputBase, Typography } from '@mui/material';
 import MarkEmailReadOutlinedIcon from "@mui/icons-material/MarkEmailReadOutlined";
 import { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
@@ -82,9 +82,9 @@ const Subscribe = () => {
 
     return (
         <Box width="100%" height="100vh"  marginTop="0" textAlign="center" backgroundColor='#CC6960' color="antiquewhite" padding="40px">
-            <IconButton>
+        
                 <MarkEmailReadOutlinedIcon fontSize="large" style={{ color: "antiquewhite" }} />
-            </IconButton>
+          
             <Typography variant="h3" marginBottom="20px">Subscribe to my Newsletter</Typography>
             <Box
                 p="20px"

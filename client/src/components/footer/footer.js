@@ -12,12 +12,12 @@ function Footer() {
             <footer className="footerContainer" id="contact">
 
                 <div className="columnOne">
-                    <Link to="./message" style={{ textDecoration: "none", color: "grey" }}>
+                    <Link to="./message" style={{ textDecoration: "none", color: "grey", ariaLabel:"link to send message" }}>
                         <div className="button">CONTACT</div>
                     </Link>
                 </div>
                 <div className="columnOne">
-                    <Link to="./mailingList" style={{ textDecoration: "none", color: "grey" }}>
+                    <Link to="./mailingList" style={{ textDecoration: "none", color: "grey", ariaLabel:"link to join mailing list" }}>
                         <div className="button">MAILING LIST</div>
                     </Link>
                 </div>
@@ -32,6 +32,7 @@ function Footer() {
                             color: "peru"
                         }}
                         target="_blank"
+                        ariaLabel="External link to the Songbird's website - the developer who created this site"
                         rel="noopener noreferrer"
                     > The Songbird
                     </a>
