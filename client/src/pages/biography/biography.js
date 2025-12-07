@@ -26,25 +26,12 @@ function Biography({ blogs = [], formattedGallery = [], bio = [] }) {
                 <div className="heading" >About</div>
                 <div className="biographyContent">
                     <div className="biographyPaper">
-                        <>
-                            {bio.map((p, index) => (
-                                <> 
-                                <SEO 
-                                    title="About"
-                                    description={p.text}
-                                    url="/biography"
-                                    />
+                            {bio.map((p, index) => ( 
                                 <p key={`bio-${p.id}-${index}`} className="biographyParagraph">
                                     {p.text}
                                 </p>
-                                </>
-
                             )
                             )}
-                        </>
-
-
-
                     </div>
                 </div>
 

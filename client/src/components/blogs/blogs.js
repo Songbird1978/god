@@ -18,12 +18,21 @@ const Record = ({ imageUrl }) => {
             <div className="centerHole"
                 style={{
                     position: "absolute",
-                    backgroundImage: imageUrl ? `url(${imageUrl})` : "none",
-                    backgroundSize: "cover",   // Ensures full coverage
-                    backgroundPosition: "center", // Centers the image
-                    backgroundRepeat: "no-repeat",
+           
                 }}
             >
+                    {imageUrl && (
+        <img 
+            src={imageUrl} 
+            alt="Blog cover"
+            style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                borderRadius: "50%"
+            }}
+        />
+    )}
             </div>
 
             {/* Grooves */}
@@ -80,16 +89,7 @@ const Blogs = ({ blogs = [] }) => {
                                 : ""; //Fallback if no image
 
                             return (
-                                <>   
-                                <SEO 
-                                    title={blog.Name}
-                                    description={blog.shortDescription}
-                                    type="article"
-                                    image={imageUrl}
-                                    url={`/blog/${blog}`}
-                                    />
-
-                                <div key={index} className="blogItem flip-card-container" >
+                                <div key={blog.id || index} className="blogItem flip-card-container" >
                                     <div className="flip-card">
                                         {/* Front side - Record - Render Record with Blog's image and grooves*/}
                                         <div className="flip-card-front">
@@ -103,9 +103,6 @@ const Blogs = ({ blogs = [] }) => {
                                         </div>
                                     </div>
                                 </div>
-
-                                </>
-
                             );
                         })
                     ) : (
