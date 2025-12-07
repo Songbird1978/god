@@ -12,8 +12,8 @@ function Footer() {
             <footer className="footerContainer" id="contact">
 
                 <div className="columnOne">
-                    <Link to="./message" style={{ textDecoration: "none", color: "antiqueWhite", ariaLabel:"link to send message" }}>
-                        <div className="button">CONTACT</div>
+                    <Link to="./message" style={{ textDecoration: "none", color: "antiqueWhite !important", ariaLabel:"link to send message" }}>
+                        <div className="button" style={{color: "antiquewhite"}}>CONTACT</div>
                     </Link>
                 </div>
                 <div className="columnOne">
@@ -24,16 +24,16 @@ function Footer() {
                 <div className="columnOneContact">
                     <Contact className="columnOneContact" />
                 </div>
-                <p> © 2024 Gary O'Donnell. <br></br>All rights reserved.<br></br>
+                <p style={{color: "antiquewhite"}}> © 2024 Gary O'Donnell. <br></br>All rights reserved.<br></br>
                     Site made with <span><HeartStraight size={15} weight="bold" color="red" /> </span>by <span>
                         <br></br> <br></br>
                     <a href="https://www.thesongbird.co.uk"
                         style={{
                             textDecoration: "none",
-                            color: "#4A5375",
-                            backgroundColor: 'antiquewhite',
-                            border: '2px solid peru',
-                            borderRadius: "15px",
+                            color: "antiquewhite",
+                          
+                            border: '3px solid antiquewhite',
+                            borderRadius: "25px",
                             padding: '5px',
                             marginLeft: '2px',
                         }}

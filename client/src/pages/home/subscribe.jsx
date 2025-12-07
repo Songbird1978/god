@@ -81,7 +81,7 @@ const Subscribe = () => {
     };
 
     return (
-        <Box width="100%" height="100vh"  marginTop="0" textAlign="center" backgroundColor='#CC6960' color="antiquewhite" padding="40px">
+        <Box width="100%" height="100vh"  marginTop="0" textAlign="center" backgroundColor='#A84a42' color="antiquewhite" padding="40px">
         
                 <MarkEmailReadOutlinedIcon fontSize="large" style={{ color: "antiquewhite" }} />
           
@@ -95,7 +95,7 @@ const Subscribe = () => {
                 justifyContent="center"
                 width="100%"
                 flexWrap="wrap"
-                backgroundColor="#CC6960"
+                backgroundColor="A84a42"
                 color="antiquewhite"
             >
                 <InputBase
@@ -121,11 +121,11 @@ const Subscribe = () => {
                         size="compact"
                     />
                 </Box>
-                <button className="button linkBtn" style={{ color: "peru" }}>
+                <button className="button linkBtn" style={{ color: "#2d3449", borderColor: 'transparent', backgroundColor: "antiquewhite", boxShadow: 'none' }}>
                     <Typography
                         sx={{
                             p: "10px",
-                            ":hover": { cursor: "pointer", color: "peru" }
+                            ":hover": { cursor: "pointer", color: "#a84a42" }
                         }}
                         onClick={handleSubscribe}
                     >
