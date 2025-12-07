@@ -223,16 +223,16 @@
 .blogModal {
     margin-top: 50px;
     max-height: 100vh;
-    border-radius: 50%;
     border: 2.5px solid rgb(43, 42, 42);
     aspect-ratio: 1 / 1;
-    background-color: rgb(24, 23, 23);
+    background-color: rgba(24, 23, 23, 0.896);
     box-shadow: 10px 5px 5px rgb(32, 29, 29);
     font-family: 'Courier New', Courier, monospace;
     color: antiquewhite;
     overflow-x: scroll;
     overflow-y: scroll;
     scrollbar-color: transparent;
+    scrollbar-width: none;
     justify-content: center;
     align-items: center;
     padding: 50px;

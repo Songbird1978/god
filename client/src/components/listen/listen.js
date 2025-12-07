@@ -6,7 +6,7 @@ import React from 'react';
 function Listen() {
 
     return (
-        <div className="listenEmbedContainer" id="listen" style={{ paddingTop: "60px", backgroundColor: "black", justifyContent: "center" }}>
+        <div className="listenEmbedContainer" id="listen" style={{ padding: "40px", backgroundColor: "black", justifyContent: "center" }}>
             <div style={{ width: "100%", color: "antiqueWhite", fontSize: "50px", fontFamily: "BigShoulder", padding: "30px" }}>Listen</div>
             <div style={{ display: "flex", justifyContent: "left", width: "100%", padding: "25px" }}>
                 <iframe style={{ border: "0", height: "50px" }}
