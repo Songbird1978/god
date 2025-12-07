@@ -3,6 +3,7 @@ import "./blogs.css";
 import BlogModal from '../blogs/blogModal.js';
 import { useState } from 'react';
 import '../../index.css';
+import SEO from '../SEO.js';
 
 // Record Component (Reusable)
 const Record = ({ imageUrl }) => {
@@ -63,7 +64,11 @@ const Blogs = ({ blogs = [] }) => {
 
     return (
         <>
-
+            <SEO 
+                title="Blog"
+                description="Latest news and updates from Gary O'D and The DSH"
+                url="/"
+                />
             <div className="blogs" id="blogs" >
                 <div className="title" style={{ width: "100%" }}>Blogs</div>
                 <div className="blogContainer">
@@ -75,6 +80,15 @@ const Blogs = ({ blogs = [] }) => {
                                 : ""; //Fallback if no image
 
                             return (
+                                <>   
+                                <SEO 
+                                    title={blog.Name}
+                                    description={blog.shortDescription}
+                                    type="article"
+                                    image={imageUrl}
+                                    url={`/blog/${blog}`}
+                                    />
+
                                 <div key={index} className="blogItem flip-card-container" >
                                     <div className="flip-card">
                                         {/* Front side - Record - Render Record with Blog's image and grooves*/}
@@ -89,6 +103,9 @@ const Blogs = ({ blogs = [] }) => {
                                         </div>
                                     </div>
                                 </div>
+
+                                </>
+
                             );
                         })
                     ) : (

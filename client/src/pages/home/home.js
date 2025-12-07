@@ -8,6 +8,7 @@ import InformationBar from '../../components/informationBar/informationBar';
 import Blogs from '../../components/blogs/blogs.js';
 import Subscribe from './subscribe.jsx';
 import Tour from '../tour/tour.js';
+import SEO from './components/SEO';
 
 
 function Home() {
@@ -134,6 +135,10 @@ function Home() {
 
     return (
         <>
+          <SEO 
+        title="Home"
+        description="Portsmouth-based rock band. Listen to our music and check tour dates."
+      />
             <div className="homeOrder">
                 <Album id="albumId" hero={hero} />
                 <Biography blogs={blogs} formattedGallery={formattedGallery} bio={bio} />
