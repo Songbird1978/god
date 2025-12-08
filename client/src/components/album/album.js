@@ -10,7 +10,7 @@ function Album() {
     
     return (
 
-        <div className="album-container-grid" >
+        <div className="album-container-grid" fetchpriority="high">
 
         <div className="album" id="album" >
             </div>
