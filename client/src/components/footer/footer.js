@@ -31,14 +31,13 @@ function Footer() {
                         style={{
                             textDecoration: "none",
                             color: "antiquewhite",
-                          
                             border: '3px solid antiquewhite',
                             borderRadius: "25px",
                             padding: '5px',
                             marginLeft: '2px',
                         }}
                         target="_blank"
-                        ariaLabel="External link to the Songbird's website - the developer who created this site"
+                        aria-label="External link to the Songbird's website"
                         rel="noopener noreferrer"
                     > The Songbird
                     </a></span>

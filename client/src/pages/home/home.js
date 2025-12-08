@@ -17,25 +17,22 @@ function Home() {
     const [blogs, setBlogs] = useState([]);
     const [formattedGallery, setGallery] = useState([]);
     const [formattedBlogImages, setBlogImages] = useState([]);
-    const [hero, setHero] = useState([]);
     const [bio, setBio] = useState([]);
     const [contact, setContact] = useState([]);
     const [links, setLinks] = useState([]);
+    //const [hero, setHero] = useState([]);
 
     // 1. Define the filterDuplicates function inside the Home component
     function filterDuplicates(images) {
         const seen = new Set();
         const uniqueImages = [];
-
         images.forEach(image => {
             const imageKey = `${image.original}-${image.thumbnail}`;
-
             if (!seen.has(imageKey)) {
                 uniqueImages.push(image);
                 seen.add(imageKey); // Track this combination as seen
             }
         });
-
         return uniqueImages;
     }
 
@@ -75,9 +72,9 @@ function Home() {
                 const galleryData = await galleryResponse.json();
 
                 // fetch hero image
-                const heroResponse = await fetch(`${API_URL}/api/heroes?populate=*`);
-                const heroData = await heroResponse.json();
-                setHero(heroData.data || []);
+                //const heroResponse = await fetch(`${API_URL}/api/heroes?populate=*`);
+                //const heroData = await heroResponse.json();
+                //setHero(heroData.data || []);
                 // console.log("hero:", heroData);
 
                 // process blog images
@@ -142,10 +139,8 @@ function Home() {
         description="Portsmouth-based rock band. Listen to our music and check tour dates."
         url="/"
       />
-            <div className="homeOrder">
-                <LazySection>               
-                    <Album id="albumId" hero={hero} />
-                </LazySection>
+            <div className="homeOrder">        
+                    <Album id="albumId" />
                 <LazySection>                
                     <Biography blogs={blogs} formattedGallery={formattedGallery} bio={bio} />
                 </LazySection>
