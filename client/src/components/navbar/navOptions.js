@@ -11,38 +11,40 @@ function NavOptions(handleDrawerClose) {
 
             <ul className="columnOneNav">
 
-                <li >
+                <li>
                     <div onClick={() => {
                         // Call the function
                         window.location.replace("/#about");  // Perform the redirect
                     }} className="columnOneNav navOption" style={{ textDecoration: 'none', cursor: "pointer" }}>ABOUT</div>
                 </li>
 
-                <li  >
+                <li>
                     <div onClick={() => {
                         // Call the function
                         window.location.replace("/#blogsTicker");  // Perform the redirect
                     }} className="columnOneNav navOption" style={{ textDecoration: 'none', cursor: "pointer" }}  >BLOG</div>
                 </li>
-                <li  >
+                <li>
                     <div onClick={() => {
                         // Call the function
                         window.location.replace("/#listen");  // Perform the redirect
                     }} className="columnOneNav navOption" style={{ textDecoration: 'none', cursor: "pointer" }}  >LISTEN</div>
                 </li>
+                <li>
                 <Logo onClick={() => {
                     handleDrawerClose();  // Call the function
                     window.location.replace("/#album");  // Perform the redirect
                 }}
                     style={{ textDecoration: 'none', cursor: 'pointer' }} />
+                    </li>
 
-                <li  >
+                <li>
                     <div onClick={() => {
                         // Call the function
                         window.location.replace("/#tour");  // Perform the redirect
                     }} className="columnOneNav navOption" style={{ textDecoration: 'none', cursor: "pointer" }}  >TOUR</div>
                 </li>
-                <li  >
+                <li>
                     <div className="columnOneNav navOption">
                         <Link
                             to="https://garyodonnellthedimestoreheroes.bandcamp.com/album/three-ways-from-nowhere"
@@ -53,7 +55,7 @@ function NavOptions(handleDrawerClose) {
                         </Link>
                     </div>
                 </li>
-                <li  >
+                <li>
                     <div onClick={() => {
                         // Call the function
                         window.location.replace("/#contact");  // Perform the redirect

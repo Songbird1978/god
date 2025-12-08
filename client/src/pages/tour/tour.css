@@ -52,14 +52,17 @@ th {
     width: 100% !important;
     height: 100%;
     border-radius: 15px;
-    border: 3px solid  #4A5375;
     text-align: center;
     cursor: pointer;
 }
 
 a {
-    color:#2d3449;
+    color:antiquewhite;
     text-decoration: none;
+}
+
+a:hover {
+    color: peru;
 }
 
 .notTouring {
@@ -68,4 +71,12 @@ a {
     text-justify: center;
     justify-content: center;
     text-align: center;
+}
+
+th.link {
+   background-color:#2d3449;
+   padding: 20px;
+   padding-bottom: 55px;
+
+ 
 }

@@ -7,7 +7,7 @@ const ImageList = ({ images }) => {
             {images.length > 0 ? (
                 images.map((img, index) => (
                     <div key={img.id || index} className="imageItem">
-                        <img src={img.thumbnail} alt="gary O'Donnell & the Dime Store Heroes" height="50" />
+                        <img src={img.thumbnail} alt={img.shortDescription} height="50" />
                     </div>
                 ))
             ) : (

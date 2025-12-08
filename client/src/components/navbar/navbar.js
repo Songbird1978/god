@@ -123,14 +123,18 @@ function Navbar() {
             {theme.direction === 'ltr' ? <CloseIcon className="icon" sx={{ marginTop: "20px" }} /> : <ChevronRightIcon className="icon" />}
           </IconButton>
         </DrawerHeader>
-        <Logo onClick={() => {
+       
+        {/* this is where the menus start */}
+        <List className='nav' style={{ backgroundColor: 'transparent', opacity: '80%', justifyContent: "center", color: "#faebd7" }}>
+          <ListItem>
+          <Logo onClick={() => {
           handleDrawerClose();  // Call the function
           window.location.replace("/#album");  // Perform the redirect
         }}
+        aria-label="Link to home page"
           style={{ fontSize: "10px", textDecoration: 'none', cursor: 'pointer' }}
           id="drawerLogo"></Logo>
-        {/* this is where the menus start */}
-        <List className='nav' style={{ backgroundColor: 'transparent', opacity: '80%', justifyContent: "center", color: "#faebd7" }}>
+          </ListItem>
           <ListItem className="listItem">
             <div
               className="listItem"

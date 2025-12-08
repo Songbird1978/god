@@ -12,11 +12,10 @@ const CustomGallery = ({ images }) => {
         <div className="galleryContainer" id="gallery">
             {images.length > 0 ? (
                 <ImageGallery
-
                     height="80vh"
                     width="auto"
                     items={images}
-                    alt="Gary O'Donnell & the Dime Store Heroes"
+                    alt={images.alt}
                     showThumbnails={true}
                     showFullscreenButton={true}
                     autoPlay={false}

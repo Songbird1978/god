@@ -93,11 +93,11 @@ function Tour() {
                             return (
 
                                 <tr key={index} className="showRow">
-                                    <th aria-label="city" className="city">{show.city}</th>
-                                    <th className="country" aria-label="country">{show.country}</th>
-                                    <th className="venue"aria-label="venue">{show.venue}</th>
-                                    <th className="date"aria-label="date">{show.date}</th>
-                                    <th className="link"aria-label="link"><button className="tourBtn linkBtn"><a href={show.link}>Tickets</a></button></th>
+                                    <th aria-label="city" className="city" role="columnheader">{show.city}</th>
+                                    <th className="country" aria-label="country" role="columnheader">{show.country}</th>
+                                    <th className="venue" aria-label="venue" role="columnheader">{show.venue}</th>
+                                    <th className="date" aria-label="date" role="columnheader">{show.date}</th>
+                                    <a href={show.link} ><th className="link" aria-label="link" role="columnheader">Tickets</th></a>
                                 </tr>
 
                             );
