@@ -9,6 +9,7 @@ import Blogs from '../../components/blogs/blogs.js';
 import Subscribe from './subscribe.jsx';
 import Tour from '../tour/tour.js';
 import SEO from '../../components/SEO';
+import LazySection from '../../components/LazySection.jsx';
 
 
 function Home() {
@@ -143,11 +144,21 @@ function Home() {
       />
             <div className="homeOrder">
                 <Album id="albumId" hero={hero} />
-                <Biography blogs={blogs} formattedGallery={formattedGallery} bio={bio} />
-                <InformationBar blogs={blogs} />
-                <Blogs blogs={blogs} formattedBlogImages={formattedBlogImages} />
-                <Listen id="listenId" />
-                <Tour id="tour" />
+                <LazySection>                
+                    <Biography blogs={blogs} formattedGallery={formattedGallery} bio={bio} />
+                </LazySection>
+                <LazySection>
+                    <InformationBar blogs={blogs} />
+                </LazySection>
+                <LazySection>
+                    <Blogs blogs={blogs} formattedBlogImages={formattedBlogImages} />
+                </LazySection>
+                <LazySection>
+                    <Listen id="listenId" />
+                </LazySection>
+                <LazySection>
+                    <Tour id="tour" />
+                </LazySection>
                 <Subscribe id="contact" contact={contact} links={links} />
             </div>
         </>
