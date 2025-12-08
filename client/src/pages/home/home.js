@@ -143,7 +143,9 @@ function Home() {
         url="/"
       />
             <div className="homeOrder">
-                <Album id="albumId" hero={hero} />
+                <LazySection>               
+                    <Album id="albumId" hero={hero} />
+                </LazySection>
                 <LazySection>                
                     <Biography blogs={blogs} formattedGallery={formattedGallery} bio={bio} />
                 </LazySection>
