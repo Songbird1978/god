@@ -2,48 +2,17 @@ import React from "react";
 //import { Link } from "react-router-dom";
 import '../album/album.css';
 import '../../index.css';
-import { useEffect, useState } from 'react';
+
 
 
 function Album() {
-    const [hero, setHero] = useState([]);
-    const [loading, setLoading] = useState(true);
-    
- 
-    useEffect(() => {
-
-        async function fetchHeroImage () {
-            try {
-
-                const API_URL = process.env.REACT_APP_API_URL;
-
-                // fetch hero image
-                const heroResponse = await fetch(`${API_URL}/api/heroes?populate=*`);
-                const heroData = await heroResponse.json();
-                const heroUrl = heroData.data[0].heroImage.url;
-                setHero(heroUrl || []);
-                //console.log("hero:", heroData.data[0].heroImage.url);
-                //console.log("hero:", heroUrl)
-                //handle the loading
-                setLoading(false);
-            } catch (error) {
-                console.error("error fetching hero image:", error);
-                setLoading(false);
-            }
-        }
-        fetchHeroImage();
-
-    }, []);
-
-    if (loading) return <div>Loading...</div>
+   
     
     return (
 
         <div className="album-container-grid" >
 
-            <div className="album" id="album" >
-                <img src={hero} alt="Gary O'Donnell & the Dime Store Heroes" className="heroImage" fetchpriority="high"/>
-            <div className="heroOverlay"></div>
+        <div className="album" id="album" >
             </div>
 
                     <div className='buttonsArea'>
