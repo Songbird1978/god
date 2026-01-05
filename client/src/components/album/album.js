@@ -55,7 +55,7 @@ function Album() {
                     src="https://res.cloudinary.com/djtvlgplj/image/upload/v1765044989/gary_at_the_wedge_dad7c2de6e.jpg"
                     alt="Gary at the Wedgewood Rooms"
                     loading="lazy"
-                    style={{ width: "70%", height: "auto" }}
+                    style={{ width: "70%", height: "70%" }}
                 />
                 <div
                     style={{
