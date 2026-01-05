@@ -39,11 +39,12 @@ function Album() {
             </div>
 
             <div
+                className="listenLive"
                 style={{
                     display: "flex",
                     flexDirection: "column",
-                    width: "100%",
-                    height: "100%",
+                    width: "100vw",
+                    height: "100vh",
                     backgroundColor: "#4A5375",
                     padding: "40px",
                     alignItems: "center",
@@ -54,7 +55,7 @@ function Album() {
                     src="https://res.cloudinary.com/djtvlgplj/image/upload/v1765044989/gary_at_the_wedge_dad7c2de6e.jpg"
                     alt="Gary at the Wedgewood Rooms"
                     loading="lazy"
-                    style={{ width: "70%", height: "70%" }}
+                    style={{ width: "70%", height: "auto" }}
                 />
                 <div
                     style={{
