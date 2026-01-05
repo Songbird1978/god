@@ -1,11 +1,10 @@
 .album-container-grid {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
     margin-bottom: 50px;
     background-color: black;
 }
@@ -19,8 +18,8 @@
     display: flex;
     justify-content: center;
     list-style-type: none;
-    width: 100%;
-    min-height: 60vh;
+    width: 100vw;
+    min-height: 50vh;
     text-decoration: none;
     background-size: cover;
     background-repeat: none;
@@ -95,8 +94,8 @@
     .actionTitle {
         margin-top: 5%;
         margin-bottom: 5%;
-        margin-left: 20%;
-        margin-right: 20%;
+        margin-left: 10%;
+        margin-right: 10%;
         text-wrap: wrap;
     }
 }
