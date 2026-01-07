@@ -49,13 +49,14 @@ function Album() {
                     padding: "40px",
                     alignItems: "center",
                     justifyContent: "center",
+                    border: "2px red solid",
                 }}
             >
                 <img
                     src="https://res.cloudinary.com/djtvlgplj/image/upload/v1765044989/gary_at_the_wedge_dad7c2de6e.jpg"
                     alt="Gary at the Wedgewood Rooms"
                     loading="lazy"
-                    style={{ width: "70%" }}
+                    style={{ width: "30rem", padding: "40px" }}
                 />
                 <div
                     style={{
@@ -65,23 +66,33 @@ function Album() {
                     }}
                 >
                     <div
-                        className="albumListdiv, actionTitle"
+                        className=" actionTitle"
                         id="showsStatement"
                         style={{}}
                     >
                         LIVE SHOWS COMING SOON...
                     </div>
-                    <div>
+                    <div
+                        style={{
+                            padding: "40px",
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center",
+                            width: "100%",
+                        }}
+                    >
                         <a
                             href="https://www.wedgewood-rooms.co.uk/events/2026-03-05-gary-odonnell-and-the-dime-store-heroes-the-wedgewood-rooms"
                             aria-label="open wedgewood rooms to buy tickets"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="albumListdiv"
+                            style={{
+                                justifyContent: "center",
+                            }}
                         >
                             <div className="button">TICKETS</div>
                         </a>
-                        <div className="albumListdiv">
+                        <div className="">
                             <div
                                 onClick={() =>
                                     window.location.replace("/#tour")
