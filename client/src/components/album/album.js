@@ -54,7 +54,7 @@ function Album() {
                     className="albumLivePicture"
                     style={{
                         display: "flex",
-                        width: "100vw",
+                        width: "70%",
                         justifyContent: "center",
                         marginTop: "40px",
                     }}
@@ -63,7 +63,7 @@ function Album() {
                         src="https://res.cloudinary.com/djtvlgplj/image/upload/v1765044989/gary_at_the_wedge_dad7c2de6e.jpg"
                         alt="Gary at the Wedgewood Rooms"
                         loading="lazy"
-                        style={{ height: "25rem", width: "25rem" }}
+                        style={{ width: "100%" }}
                     />
                 </div>
                 <div
@@ -82,7 +82,7 @@ function Album() {
                     </div>
                     <div
                         style={{
-                            padding: "40px",
+                            padding: "15px",
                             display: "grid",
                             flexDirection: "column",
                             justifyContent: "center",
