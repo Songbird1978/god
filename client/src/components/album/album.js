@@ -44,20 +44,28 @@ function Album() {
                     display: "flex",
                     flexDirection: "column",
                     width: "100vw",
-                    height: "100vh",
+                    height: "auto",
                     backgroundColor: "#4A5375",
-                    padding: "40px",
                     alignItems: "center",
                     justifyContent: "center",
-                    border: "2px red solid",
                 }}
             >
-                <img
-                    src="https://res.cloudinary.com/djtvlgplj/image/upload/v1765044989/gary_at_the_wedge_dad7c2de6e.jpg"
-                    alt="Gary at the Wedgewood Rooms"
-                    loading="lazy"
-                    style={{ width: "30rem", padding: "40px" }}
-                />
+                <div
+                    className="albumLivePicture"
+                    style={{
+                        display: "flex",
+                        width: "100vw",
+                        justifyContent: "center",
+                        marginTop: "40px",
+                    }}
+                >
+                    <img
+                        src="https://res.cloudinary.com/djtvlgplj/image/upload/v1765044989/gary_at_the_wedge_dad7c2de6e.jpg"
+                        alt="Gary at the Wedgewood Rooms"
+                        loading="lazy"
+                        style={{ height: "25rem", width: "25rem" }}
+                    />
+                </div>
                 <div
                     style={{
                         display: "block",
@@ -75,7 +83,7 @@ function Album() {
                     <div
                         style={{
                             padding: "40px",
-                            display: "flex",
+                            display: "grid",
                             flexDirection: "column",
                             justifyContent: "center",
                             width: "100%",
@@ -88,11 +96,12 @@ function Album() {
                             rel="noopener noreferrer"
                             style={{
                                 justifyContent: "center",
+                                padding: "10px",
                             }}
                         >
                             <div className="button">TICKETS</div>
                         </a>
-                        <div className="">
+                        <div style={{ padding: "10px" }}>
                             <div
                                 onClick={() =>
                                     window.location.replace("/#tour")
